@@ -56,10 +56,10 @@ const Methodology = () => {
             for all your marketing initiatives.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 max-w-4xl mx-auto relative">
           {steps.map((step, index) => (
-            <div 
+            <div
               key={index}
               className="reveal-on-scroll"
               style={{ animationDelay: `${index * 0.3}s` }}
@@ -73,7 +73,7 @@ const Methodology = () => {
                     <div className="absolute top-16 left-1/2 w-px h-36 md:h-20 bg-gray-200 -translate-x-1/2"></div>
                   )}
                 </div>
-                
+
                 <div className="flex-1 pt-2">
                   <h3 className="text-xl md:text-2xl font-bold text-white mb-2">{step.title}</h3>
                   <p className="text-marketing-600">{step.description}</p>

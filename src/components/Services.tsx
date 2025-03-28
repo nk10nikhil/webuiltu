@@ -70,7 +70,7 @@ const Services = () => {
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600">
             Transforming Ideas into <br />
-            <span className="text-transparent text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600">
               Impactful Experiences
             </span>
           </h2>

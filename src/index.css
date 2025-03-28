@@ -72,16 +72,25 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply tracking-tight;
   }
+
   .section-heading {
     @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-marketing-900;
   }
+
   .btn-marketing {
     @apply px-6 py-3 bg-marketing-800 text-white rounded-lg font-medium hover:bg-marketing-700 transition-colors shadow-sm;
   }
@@ -106,8 +115,15 @@
 
 /* Custom animations */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .animate-float {

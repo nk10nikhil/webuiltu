@@ -22,7 +22,7 @@ const Footer = () => {
               </div>
             </a>
             <p className="text-marketing-400 mb-6 max-w-xs">
-              A premier marketing agency specializing in event organization and 
+              A premier marketing agency specializing in event organization and
               brand promotion across various social media platforms.
             </p>
             <div className="mt-8">
@@ -50,7 +50,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
@@ -81,8 +81,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
-          <div>
+
+          <div className="hidden md:block">
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
               <li>
@@ -112,7 +112,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-3">
@@ -142,12 +142,12 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-marketing-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-marketing-400 text-sm">
             &copy; {new Date().getFullYear()} WeBuilt_U Agency. All rights reserved.
           </p>
-          
+
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-marketing-400 hover:text-white text-sm transition-colors">
               Privacy Policy
@@ -159,8 +159,9 @@ const Footer = () => {
               Cookie Policy
             </a>
           </div>
-          
+
           <button
+            type="button"
             onClick={scrollToTop}
             className="bg-marketing-800 hover:bg-marketing-700 text-white p-3 rounded-full transition-colors mt-6 md:mt-0 focus:outline-none"
             aria-label="Scroll to top"

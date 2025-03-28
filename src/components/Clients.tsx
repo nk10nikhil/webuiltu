@@ -25,15 +25,15 @@ const Clients = () => {
           <p className="font-medium mb-2 bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-rose-300">Trusted by Industry Leaders</p>
           <h3 className="text-4xl md:text-3xl font-bold text-gray-400">Our Valued Partners</h3>
         </div>
-        
+
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
           {clientLogos.map((client, index) => (
-            <div 
+            <div
               key={index}
               className="flex items-center justify-center reveal-on-scroll"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-                  <img src={client.path} alt={client.name} className="scale-50" />
+              <img src={client.path} alt={client.name} className="scale-50" />
             </div>
           ))}
         </div>

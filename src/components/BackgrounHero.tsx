@@ -205,7 +205,7 @@ export default function BackgroundHero({
                         </motion.div>
                     </div>
                 </div>
-                
+
             </div>
 
             <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 pointer-events-none" />

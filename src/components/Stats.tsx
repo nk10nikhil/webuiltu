@@ -34,7 +34,7 @@ const Stats = () => {
     <section className="py-8 px-2 md:px-4 relative bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] text-white overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{ 
+        <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
           backgroundSize: '10px 10px',
         }}></div>
@@ -44,9 +44,8 @@ const Stats = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div
-              key={index} 
-              className="text-center reveal-on-scroll"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              key={index}
+              className={`text-center reveal-on-scroll animation-delay-${index}`}
             >
               <div className="bg-white/50 p-3 rounded-full inline-flex items-center justify-center mb-4 mx-auto">
                 {stat.icon}
