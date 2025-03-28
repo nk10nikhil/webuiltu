@@ -43,19 +43,25 @@ const CaseStudies = () => {
   ];
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-marketing-50 relative overflow-hidden">
+    <section className="py-8 px-6 md:px-12 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
+          backgroundSize: '10px 10px',
+        }}></div>
+      </div>
       <div className="container mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
-          <div className="inline-block mb-6 px-3 py-1 border border-marketing-200 rounded-full text-sm font-medium text-marketing-700 bg-white">
-            Success Stories
+        <div className="text-center max-w-3xl mx-auto mb-4 reveal-on-scroll">
+          <div className="inline-block mb-2 px-3 py-1 border border-white/20 rounded-full font-medium text-white/90 backdrop-blur-sm bg-white/10 text-lg">
+            Our Portfolio
           </div>
-          <h2 className="section-heading">
+          <h2 className="section-heading text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600">
             Transformative <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600">
-              Case Studies
+              Events
             </span>
           </h2>
-          <p className="text-marketing-600 text-lg">
+          <p className="text-white/80 text-lg">
             Explore how our strategic approach has delivered measurable results
             and transformed brands across diverse industries.
           </p>
@@ -64,7 +70,7 @@ const CaseStudies = () => {
         <div className="grid md:grid-cols-12 gap-8 items-center">
           {/* Case Study Selector */}
           <div className="md:col-span-5 lg:col-span-4 reveal-on-scroll">
-            <div className="bg-white rounded-xl shadow-sm p-2">
+            <div className="bg-white/50 rounded-xl shadow-sm p-2">
               {caseStudies.map((caseStudy, index) => (
                 <button
                   key={index}
@@ -72,18 +78,18 @@ const CaseStudies = () => {
                   className={cn(
                     "w-full text-left p-4 rounded-lg transition-all duration-300 flex items-center justify-between",
                     activeCase === index
-                      ? "bg-marketing-100 text-marketing-900"
-                      : "hover:bg-gray-50"
+                      ? "bg-white/90 text-black"
+                      : "hover:bg-white/30"
                   )}
                 >
                   <div>
-                    <p className="text-xs font-medium text-marketing-500 mb-1">{caseStudy.category}</p>
+                    <p className="text-xs font-medium text-black mb-1">{caseStudy.category}</p>
                     <h3 className="font-bold">{caseStudy.title}</h3>
                   </div>
                   <ChevronRight
                     className={cn(
                       "h-5 w-5 transition-transform",
-                      activeCase === index ? "text-marketing-700 rotate-90" : "text-gray-400"
+                      activeCase === index ? "text-marketing-700 rotate-90" : "text-black"
                     )}
                   />
                 </button>
@@ -93,8 +99,8 @@ const CaseStudies = () => {
 
           {/* Case Study Detail */}
           <div className="md:col-span-7 lg:col-span-8 reveal-on-scroll" style={{ animationDelay: "0.2s" }}>
-            <div className="relative rounded-xl overflow-hidden bg-white shadow-md">
-              <div className="aspect-[16/9] overflow-hidden">
+            <div className="relative rounded-xl overflow-hidden bg-white/90 shadow-md">
+              <div className="aspect-[9/4] overflow-hidden">
                 <img
                   src={caseStudies[activeCase].image}
                   alt={caseStudies[activeCase].title}
@@ -105,19 +111,19 @@ const CaseStudies = () => {
                 <div className="flex flex-wrap gap-6 mb-4">
                   {caseStudies[activeCase].metrics.map((metric, idx) => (
                     <div key={idx} className="flex items-center">
-                      <div className="mr-3 bg-marketing-100 p-2 rounded-full text-marketing-700">
+                      <div className="mr-3 bg-marketing-100 p-2 rounded-full text-black">
                         {metric.icon}
                       </div>
                       <div>
-                        <p className="text-xs text-marketing-500">{metric.label}</p>
-                        <p className="font-bold text-marketing-900">{metric.value}</p>
+                        <p className="text-xs font-semibold text-black">{metric.label}</p>
+                        <p className="font-bold text-black">{metric.value}</p>
                       </div>
                     </div>
                   ))}
                 </div>
-                <p className="text-marketing-600">{caseStudies[activeCase].description}</p>
+                <p className="text-stone-700">{caseStudies[activeCase].description}</p>
                 <div className="mt-6">
-                  <a href="#" className="text-marketing-700 font-medium inline-flex items-center hover:text-marketing-900 transition-colors">
+                  <a href="#" className="text-black font-medium inline-flex items-center hover:text-black/80 transition-colors">
                     Read full case study <ChevronRight className="ml-1 h-4 w-4" />
                   </a>
                 </div>

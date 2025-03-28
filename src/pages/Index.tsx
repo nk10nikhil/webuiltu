@@ -13,14 +13,14 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import CaseStudies from '../components/CaseStudies';
 import TrendingInsights from '../components/TrendingInsights';
-import Technologies from '../components/Technologies';
+import BackgroundHero from '../components/BackgrounHero';
+import LogoScroll from '@/components/LogoScroll';
 
 const Index = () => {
   useEffect(() => {
-    // Initialize reveal on scroll elements
     const handleScroll = () => {
       const elements = document.querySelectorAll('.reveal-on-scroll');
-      
+
       elements.forEach((el) => {
         const rect = el.getBoundingClientRect();
         const windowHeight = window.innerHeight;
@@ -31,7 +31,7 @@ const Index = () => {
       });
     };
     
-    handleScroll(); // Check on initial load
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     
     return () => {
@@ -43,18 +43,14 @@ const Index = () => {
     <div className="relative overflow-hidden">
       <Navbar />
       <main>
-        <Hero />
+        <BackgroundHero />
+        <LogoScroll />
         <Clients />
         <Services />
-        <Technologies />
         <Stats />
-        <Portfolio />
         <CaseStudies />
         <Methodology />
-        <TrendingInsights />
-        <Testimonials />
         <CallToAction />
-        <Contact />
       </main>
       <Footer />
     </div>

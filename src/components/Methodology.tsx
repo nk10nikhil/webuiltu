@@ -33,19 +33,25 @@ const Methodology = () => {
   ];
 
   return (
-    <section id="methodology" className="py-24 px-6 md:px-12 bg-white relative overflow-hidden">
+    <section id="methodology" className="py-10 px-6 md:px-12 bg-black/20 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
+          backgroundSize: '10px 10px',
+        }}></div>
+      </div>
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
-          <div className="inline-block mb-6 px-3 py-1 border border-marketing-200 rounded-full text-sm font-medium text-marketing-700 bg-white">
+          <div className="inline-block mb-2 px-3 py-1 border border-white/20 rounded-full font-medium text-white/90 backdrop-blur-sm bg-white/10 text-lg">
             Our Methodology
           </div>
-          <h2 className="section-heading">
+          <h2 className="section-heading text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600">
             A Proven Process for <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600">
               Marketing Success
             </span>
           </h2>
-          <p className="text-marketing-600 text-lg">
+          <p className="text-white/80 text-lg">
             Our systematic approach ensures consistent results and measurable impact
             for all your marketing initiatives.
           </p>
@@ -64,12 +70,12 @@ const Methodology = () => {
                     {step.icon}
                   </div>
                   {index < steps.length - 1 && (
-                    <div className="absolute top-16 left-1/2 w-px h-12 bg-gray-200 -translate-x-1/2"></div>
+                    <div className="absolute top-16 left-1/2 w-px h-36 md:h-20 bg-gray-200 -translate-x-1/2"></div>
                   )}
                 </div>
                 
                 <div className="flex-1 pt-2">
-                  <h3 className="text-xl md:text-2xl font-bold text-marketing-900 mb-2">{step.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">{step.title}</h3>
                   <p className="text-marketing-600">{step.description}</p>
                 </div>
               </div>

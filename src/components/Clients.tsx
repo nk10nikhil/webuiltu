@@ -4,20 +4,26 @@ import React from 'react';
 const Clients = () => {
   // This would normally be images of actual client logos
   const clientLogos = [
-    { name: 'TechVision', initials: 'TV' },
-    { name: 'Evolve Fashion', initials: 'EF' },
-    { name: 'WellnessPro', initials: 'WP' },
-    { name: 'GlobalMedia', initials: 'GM' },
-    { name: 'UrbanEats', initials: 'UE' },
-    { name: 'FutureFin', initials: 'FF' },
+    { name: 'Lenovo', path: './lenovo.png' },
+    { name: 'PW', path: './pw.jpg' },
+    { name: 'Jeera', path: './jeera.png' },
+    { name: 'Sundrop', path: './sundrop.png' },
+    { name: 'Bisleri', path: './bisleri.png' },
+    { name: 'RedBull', path: './redbull.jpg' },
   ];
 
   return (
-    <section className="py-16 px-6 md:px-12 bg-gray-50">
+    <section className="py-10 px-2 md:px-4 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05]">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
+          backgroundSize: '10px 10px',
+        }}></div>
+      </div>
       <div className="container mx-auto">
-        <div className="text-center mb-10 reveal-on-scroll">
-          <p className="text-marketing-700 font-medium mb-2">Trusted by Industry Leaders</p>
-          <h3 className="text-2xl md:text-3xl font-bold text-marketing-900">Our Valued Partners</h3>
+        <div className="text-center mb-4 reveal-on-scroll">
+          <p className="font-medium mb-2 bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-rose-300">Trusted by Industry Leaders</p>
+          <h3 className="text-4xl md:text-3xl font-bold text-gray-400">Our Valued Partners</h3>
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
@@ -27,9 +33,7 @@ const Clients = () => {
               className="flex items-center justify-center reveal-on-scroll"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-24 h-24 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center hover:shadow-md transition-shadow duration-300">
-                <span className="text-2xl font-bold text-marketing-800">{client.initials}</span>
-              </div>
+                  <img src={client.path} alt={client.name} className="scale-50" />
             </div>
           ))}
         </div>

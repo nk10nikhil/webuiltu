@@ -1,6 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
+import BackgroundHero from './BackgrounHero';
 
 const Hero = () => {
   const parallaxRef = useRef<HTMLDivElement>(null);
@@ -56,7 +57,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-16 pb-12 px-6 md:px-12">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-16 pb-12 px-6 md:px-12 bg-neutral-900">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-100 -z-10"></div>
       
@@ -87,13 +88,13 @@ const Hero = () => {
             Elevate Your Brand
           </div>
           <h1 className="section-heading animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            We Create <br/> 
+            Not Just Marketing<br/> 
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600">
-              Memorable Experiences
+              We Create Experiences
             </span>
           </h1>
           <div className="inline-block mb-6 px-3 py-1 border border-marketing-200 rounded-full text-sm font-medium text-marketing-700 bg-white bg-opacity-80 backdrop-blur-sm animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            Connect | Engage | Grow
+            Where Marketing Meets Influence
           </div>
           <p className="text-marketing-600 text-lg md:text-xl mb-8 animate-fade-in" style={{ animationDelay: '0.9s' }}>
             A premier marketing agency specializing in event organization 
