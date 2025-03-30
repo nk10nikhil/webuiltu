@@ -1,15 +1,17 @@
 
+import { link } from 'fs';
 import React from 'react';
 
 const Clients = () => {
   // This would normally be images of actual client logos
   const clientLogos = [
-    { name: 'Lenovo', path: './lenovo.png' },
-    { name: 'PW', path: './pw.jpg' },
-    { name: 'Jeera', path: './jeera.png' },
-    { name: 'Sundrop', path: './sundrop.png' },
-    { name: 'Bisleri', path: './bisleri.png' },
-    { name: 'RedBull', path: './redbull.jpg' },
+    { name: 'Lenovo', path: './lenovo.png', link: 'https://www.lenovo.com/in/en/' },
+    { name: 'PW', path: './pw.jpg', link: 'https://www.pw.live/' },
+    { name: 'Jeera', path: './jeera.png', link: 'https://banarasijeera.in/' },
+    { name: 'Sundrop', path: './sundrop.png', link: 'https://www.sundropfoods.com/' },
+    { name: 'Bisleri', path: './bisleri.png', link: 'https://www.bisleri.com/' },
+    { name: 'RedBull', path: './redbull.jpg', link: 'https://www.redbull.com/in-en/' },
+    // { name: 'Oggy Travels', path: './oggy.png' },
   ];
 
   return (
@@ -28,13 +30,16 @@ const Clients = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
           {clientLogos.map((client, index) => (
-            <div
+            <a
               key={index}
               className="flex items-center justify-center reveal-on-scroll"
               style={{ animationDelay: `${index * 0.1}s` }}
+              href="{client.link}"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img src={client.path} alt={client.name} className="scale-50" />
-            </div>
+            </a>
           ))}
         </div>
       </div>
