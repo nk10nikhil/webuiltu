@@ -5,7 +5,7 @@ import React from 'react';
 const Clients = () => {
   // This would normally be images of actual client logos
   const clientLogos = [
-    { name: 'Lenovo', path: './lenovo.png', link: 'https://www.lenovo.com/in/en/' },
+    { name: 'Lenovo', path: './lenovo.png', link: "https://www.lenovo.com/in/en/" },
     { name: 'PW', path: './pw.jpg', link: 'https://www.pw.live/' },
     { name: 'Jeera', path: './jeera.png', link: 'https://banarasijeera.in/' },
     { name: 'Sundrop', path: './sundrop.png', link: 'https://www.sundropfoods.com/' },
@@ -34,7 +34,7 @@ const Clients = () => {
               key={index}
               className="flex items-center justify-center reveal-on-scroll"
               style={{ animationDelay: `${index * 0.1}s` }}
-              href="{client.link}"
+              href={client.link}
               target="_blank"
               rel="noopener noreferrer"
             >
