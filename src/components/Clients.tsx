@@ -11,11 +11,11 @@ const Clients = () => {
     { name: 'Sundrop', path: './sundrop.png', link: 'https://www.sundropfoods.com/' },
     { name: 'Bisleri', path: './bisleri.png', link: 'https://www.bisleri.com/' },
     { name: 'RedBull', path: './redbull.jpg', link: 'https://www.redbull.com/in-en/' },
-    // { name: 'Oggy Travels', path: './oggy.png' },
+    { name: 'Oggy Travels', path: './oggy.png', link: 'https://oggyholidays.com/' },
   ];
 
   return (
-    <section className="py-10 px-2 md:px-4 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05]">
+    <section className="py-10 px-0 md:px-4 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05]">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
@@ -28,7 +28,7 @@ const Clients = () => {
           <h3 className="text-4xl md:text-3xl font-bold text-gray-400">Our Valued Partners</h3>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-1 items-center">
           {clientLogos.map((client, index) => (
             <a
               key={index}
@@ -38,8 +38,9 @@ const Clients = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={client.path} alt={client.name} className="scale-50" />
+              <img src={client.path} alt={client.name} className={`${client.name === 'Oggy Travels' ? 'scale-100' : 'scale-50'}`} />
             </a>
+
           ))}
         </div>
       </div>

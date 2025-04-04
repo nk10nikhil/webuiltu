@@ -31,7 +31,7 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-8 px-2 md:px-4 relative bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] text-white overflow-hidden">
+    <section className="py-8 px-0 md:px-4 relative bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] text-white overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{

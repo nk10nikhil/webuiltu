@@ -154,7 +154,7 @@ export default function BackgroundHero({
                             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] mb-8 md:mb-12"
                         >
                             <img src="/logo.jpg" alt="webuiltu" width={20} height={20} className="rounded-full" />
-                            <span className="text-sm text-white/60 tracking-wide">{badge}</span>
+                            <span className="text-sm text-white/80 tracking-wide">{badge}</span>
                         </motion.div>
 
                         <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">

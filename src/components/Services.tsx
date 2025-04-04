@@ -50,7 +50,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-10 px-6 md:px-12 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] text-white relative overflow-hidden">
+    <section id="services" className="py-10 px-0 md:px-12 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] text-white relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <div className="absolute -right-1/4 -top-1/4 w-1/2 h-1/2 bg-marketing-500 rounded-full filter blur-3xl"></div>
@@ -96,7 +96,7 @@ const Services = () => {
                   <div className="bg-gradient-to-br from-black to-marketing-800 p-4 rounded-lg inline-flex mb-6">
                     {tech.icon}
                   </div>
-                  <h3 className="text-xl text-white/90 font-bold mb-3">{tech.title}</h3>
+                  <h3 className="text-2xl text-white font-semibold mb-3">{tech.title}</h3>
                 </div>
 
                 <p className="text-white/90">{tech.description}</p>

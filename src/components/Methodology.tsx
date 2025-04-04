@@ -33,7 +33,7 @@ const Methodology = () => {
   ];
 
   return (
-    <section id="methodology" className="py-10 px-6 md:px-12 bg-black/20 relative overflow-hidden">
+    <section id="methodology" className="py-10 px-0 md:px-12 bg-black/20 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
@@ -41,7 +41,7 @@ const Methodology = () => {
         }}></div>
       </div>
       <div className="container mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16 reveal-on-scroll">
           <div className="inline-block mb-2 px-3 py-1 border border-white/20 rounded-full font-medium text-white/90 backdrop-blur-sm bg-white/10 text-lg">
             Our Methodology
           </div>
@@ -64,7 +64,7 @@ const Methodology = () => {
               className="reveal-on-scroll"
               style={{ animationDelay: `${index * 0.3}s` }}
             >
-              <div className="flex items-start mb-12 relative">
+              <div className="flex items-start mb-8 md:mb-12 relative">
                 <div className="mr-6 relative z-10">
                   <div className="bg-gradient-to-r from-marketing-800 to-marketing-700 w-16 h-16 rounded-full flex items-center justify-center shadow-lg">
                     {step.icon}

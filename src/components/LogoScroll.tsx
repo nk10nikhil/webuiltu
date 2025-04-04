@@ -3,21 +3,13 @@ import React, { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 const companies = [
-  "Microsoft",
-  "Amazon",
-  "Google",
-  "Meta",
-  "Apple",
-  "Netflix",
-  "Airbnb",
-  "Uber",
-  "Salesforce",
-  "IBM",
-  "Oracle",
-  "Adobe",
-  "Intel",
-  "Cisco",
-  "Tesla"
+  "Red Bull",
+  "Oggy Holidays",
+  "Lenovo",
+  "Physics Wallah",
+  "Banarsi Jeera",
+  "Sun Drop",
+  "Bisleri",
 ];
 
 interface LogoScrollProps {
@@ -41,7 +33,7 @@ const LogoScroll: React.FC<LogoScrollProps> = ({ className }) => {
 
   return (
     <div className={cn("py-2 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] relative", className)}>
-      <div className="container mx-auto px-4 mb-4">
+      <div className="container mx-auto px-0 mb-4">
         <div className="flex items-center gap-3">
           <div className="h-px flex-1 bg-white/10"></div>
           <div className="text-white/40 text-sm uppercase tracking-wider font-medium">Trusted By Leading Companies</div>
@@ -59,7 +51,7 @@ const LogoScroll: React.FC<LogoScrollProps> = ({ className }) => {
         >
           <div
             ref={scrollerInnerRef}
-            className="w-max flex items-center justify-center gap-8 animate-[scroll_30s_linear_infinite]"
+            className="w-max flex items-center justify-center gap-1 animate-[scroll_20s_linear_infinite]"
           >
             {companies.map((company, index) => (
               <div

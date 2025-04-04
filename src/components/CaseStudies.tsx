@@ -43,7 +43,7 @@ const CaseStudies = () => {
   ];
 
   return (
-    <section id="case-studies-section" className="py-8 px-6 md:px-12 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] relative overflow-hidden">
+    <section id="case-studies-section" className="py-8 px-0 md:px-12 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
@@ -61,7 +61,7 @@ const CaseStudies = () => {
               Events
             </span>
           </h2>
-          <p className="text-white/80 text-lg">
+          <p className="text-white/80 text-lg pb-3">
             Explore how our strategic approach has delivered measurable results
             and transformed brands across diverse industries.
           </p>
@@ -123,7 +123,7 @@ const CaseStudies = () => {
                 </div>
                 <p className="text-stone-700">{caseStudies[activeCase].description}</p>
                 <div className="mt-6">
-                  <a href="#" className="text-black font-medium inline-flex items-center hover:text-black/80 transition-colors">
+                  <a href="#" className="text-black/60 font-medium inline-flex items-center hover:text-black/80 transition-colors">
                     Read full case study <ChevronRight className="ml-1 h-4 w-4" />
                   </a>
                 </div>
