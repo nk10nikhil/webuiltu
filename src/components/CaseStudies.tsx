@@ -43,7 +43,7 @@ const CaseStudies = () => {
   ];
 
   return (
-    <section className="py-8 px-6 md:px-12 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] relative overflow-hidden">
+    <section id="case-studies-section" className="py-8 px-6 md:px-12 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',

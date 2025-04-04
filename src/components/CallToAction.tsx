@@ -12,7 +12,7 @@ const CallToAction = () => {
   ];
 
   return (
-    <section className="py-10 px-6 md:px-12 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] text-white overflow-hidden relative">
+    <section className="pb-10 px-0 md:px-12 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] text-white overflow-hidden relative">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
@@ -44,12 +44,24 @@ const CallToAction = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button className="bg-white text-marketing-900 hover:bg-white/80">
+              <Button
+                className="bg-white text-black hover:bg-white/80 border-black"
+                onClick={() => window.open('https://forms.gle/5VjtQjPcMxZrtQM18', '_blank')}
+              >
                 Schedule a Consultation
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white/80">
-                View Our Case Studies
+              <Button
+                variant="outline"
+                className="border-white text-white hover:bg-white/80"
+                onClick={() => {
+                  const section = document.getElementById('case-studies-section');
+                  if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                View Our Portfolio
               </Button>
             </div>
           </div>
@@ -85,9 +97,6 @@ const CallToAction = () => {
                   />
                 </div>
                 <div>
-                  {/* <Button className="w-full bg-white text-marketing-900 hover:bg-gray-100 py-6">
-                    Send Message
-                  </Button> */}
                   <button
                     type="submit"
                     className="btn-marketing inline-flex items-center justify-center w-full md:w-auto"
