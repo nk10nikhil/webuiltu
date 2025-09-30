@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Award, Users, Calendar, BarChart } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Star } from 'lucide-react';
 
 const Stats = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -209,10 +210,14 @@ const Stats = () => {
 
       {/* Background pattern overlay */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
-          backgroundSize: '10px 10px',
-        }}></div>
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundSize: "10px 10px",
+          }}
+        ></div>
       </div>
 
       <div className="container mx-auto relative z-10">
@@ -225,10 +230,14 @@ const Stats = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-2xl lg:text-3xl font-bold mb-4">
-              Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600">Industry Leaders</span>
+              Trusted by{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600">
+                Industry Leaders
+              </span>
             </h3>
             <p className="text-white/80 max-w-2xl mx-auto">
-              Our track record speaks for itself. Here's what we've achieved together with our clients.
+              Our track record speaks for itself. Here's what we've achieved
+              together with our clients.
             </p>
           </div>
 
@@ -249,20 +258,47 @@ const Stats = () => {
                 <div className="bg-white/10 backdrop-blur-sm p-3 rounded-full inline-flex items-center justify-center mb-4 mx-auto group-hover:bg-white/20 transition-all duration-300">
                   <stat.icon className="h-8 w-8 text-marketing-400" />
                 </div>
-                
+
                 <div className="mb-2">
                   <CountUpNumber value={stat.value} suffix={stat.suffix} />
                 </div>
-                
+
                 <div className="text-xl font-medium text-white/90 mb-1 group-hover:text-white transition-colors">
                   {stat.label}
                 </div>
-                
+
                 <div className="text-sm text-white/70 group-hover:text-white/80 transition-colors">
                   {stat.description}
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          <div className="mt-16 flex justify-center">
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="flex items-center gap-2"
+            >
+              {[...Array(5)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  animate={{
+                    scale: [1, 1.2, 1],
+                    opacity: [0.5, 1, 0.5],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: i * 0.2,
+                  }}
+                >
+                  <Star className="w-6 h-6 text-primary-accent fill-primary-accent/20" />
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
 
           {/* Decorative Line */}

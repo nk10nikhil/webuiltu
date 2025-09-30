@@ -10,8 +10,10 @@ import Footer from '../components/Footer';
 import CaseStudies from '../components/CaseStudies';
 import BackgroundHero from '../components/BackgrounHero';
 import LogoScroll from '@/components/LogoScroll';
-// import Dock from '@/components/Dock';
-// import { Home, Briefcase, BarChart3, Users, Phone, Mail } from 'lucide-react';
+import Newsletter from '@/components/Newsletter';
+import About from '@/components/About';
+import FAQ from '@/components/FAQ';
+import Reviews from '@/components/Reviews';
 
 const Index = () => {
   useEffect(() => {
@@ -35,8 +37,6 @@ const Index = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  // // Define navigation items for the dock
   // const dockItems = [
   //   {
   //     id: 'home',
@@ -90,29 +90,23 @@ const Index = () => {
       <main>
         <BackgroundHero />
         <LogoScroll />
-        <div id="clients">
-          {/* <Clients /> */}
-        </div>
+        <CallToAction />
+
         <div id="services">
           <Services />
         </div>
         <div id="stats">
           <Stats />
         </div>
-        <CaseStudies />
+        <About />
         <Methodology />
-        <CallToAction />
+        <Reviews />
+        <FAQ />
       </main>
+      <Newsletter />
       <div id="footer">
         <Footer />
       </div>
-      
-      {/* Add the dock component */}
-      {/* <Dock 
-        items={dockItems} 
-        position="bottom" 
-        className="bottom-6"
-      /> */}
     </div>
   );
 };

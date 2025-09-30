@@ -12,7 +12,7 @@ const CallToAction = () => {
   ];
 
   return (
-    <section id="contact" className="pb-10 px-0 md:px-12 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] text-white overflow-hidden relative">
+    <section id="contact" className="pb-10 py-12 md:py-24 px-0 md:px-12 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] text-white overflow-hidden relative">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
