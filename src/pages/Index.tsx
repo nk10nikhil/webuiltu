@@ -91,7 +91,7 @@ const Index = () => {
         <BackgroundHero />
         <LogoScroll />
         <div id="clients">
-          <Clients />
+          {/* <Clients /> */}
         </div>
         <div id="services">
           <Services />
