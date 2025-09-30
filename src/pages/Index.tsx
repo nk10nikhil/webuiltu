@@ -108,11 +108,11 @@ const Index = () => {
       </div>
       
       {/* Add the dock component */}
-      <Dock 
+      {/* <Dock 
         items={dockItems} 
         position="bottom" 
         className="bottom-6"
-      />
+      /> */}
     </div>
   );
 };
