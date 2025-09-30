@@ -10,6 +10,8 @@ import Footer from '../components/Footer';
 import CaseStudies from '../components/CaseStudies';
 import BackgroundHero from '../components/BackgrounHero';
 import LogoScroll from '@/components/LogoScroll';
+// import Dock from '@/components/Dock';
+// import { Home, Briefcase, BarChart3, Users, Phone, Mail } from 'lucide-react';
 
 const Index = () => {
   useEffect(() => {
@@ -34,20 +36,83 @@ const Index = () => {
     };
   }, []);
 
+  // // Define navigation items for the dock
+  // const dockItems = [
+  //   {
+  //     id: 'home',
+  //     icon: <Home className="w-8 h-8 text-white" />,
+  //     label: 'Home',
+  //     onClick: () => {
+  //       window.scrollTo({ top: 0, behavior: 'smooth' });
+  //     }
+  //   },
+  //   {
+  //     id: 'services',
+  //     icon: <Briefcase className="w-8 h-8 text-white" />,
+  //     label: 'Services',
+  //     onClick: () => {
+  //       const servicesElement = document.querySelector('#services');
+  //       servicesElement?.scrollIntoView({ behavior: 'smooth' });
+  //     }
+  //   },
+  //   {
+  //     id: 'stats',
+  //     icon: <BarChart3 className="w-8 h-8 text-white" />,
+  //     label: 'Stats',
+  //     onClick: () => {
+  //       const statsElement = document.querySelector('#stats');
+  //       statsElement?.scrollIntoView({ behavior: 'smooth' });
+  //     }
+  //   },
+  //   {
+  //     id: 'clients',
+  //     icon: <Users className="w-8 h-8 text-white" />,
+  //     label: 'Clients',
+  //     onClick: () => {
+  //       const clientsElement = document.querySelector('#clients');
+  //       clientsElement?.scrollIntoView({ behavior: 'smooth' });
+  //     }
+  //   },
+  //   {
+  //     id: 'contact',
+  //     icon: <Phone className="w-8 h-8 text-white" />,
+  //     label: 'Contact',
+  //     onClick: () => {
+  //       const footerElement = document.querySelector('#footer');
+  //       footerElement?.scrollIntoView({ behavior: 'smooth' });
+  //     }
+  //   }
+  // ];
+
   return (
     <div className="relative overflow-hidden">
       <Navbar />
       <main>
         <BackgroundHero />
         <LogoScroll />
-        <Clients />
-        <Services />
-        <Stats />
+        <div id="clients">
+          <Clients />
+        </div>
+        <div id="services">
+          <Services />
+        </div>
+        <div id="stats">
+          <Stats />
+        </div>
         <CaseStudies />
         <Methodology />
         <CallToAction />
       </main>
-      <Footer />
+      <div id="footer">
+        <Footer />
+      </div>
+      
+      {/* Add the dock component */}
+      <Dock 
+        items={dockItems} 
+        position="bottom" 
+        className="bottom-6"
+      />
     </div>
   );
 };
