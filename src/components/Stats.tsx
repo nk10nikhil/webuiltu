@@ -229,7 +229,7 @@ const Stats = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <div className="text-center mb-12">
-            <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+            <h3 className="text-4xl md:text-5xl font-bold mb-4">
               Trusted by{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600">
                 Industry Leaders
@@ -255,12 +255,24 @@ const Stats = () => {
                 }}
                 className="text-center bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300 group hover:scale-105"
               >
-                <div className="bg-white/10 backdrop-blur-sm p-3 rounded-full inline-flex items-center justify-center mb-4 mx-auto group-hover:bg-white/20 transition-all duration-300">
-                  <stat.icon className="h-8 w-8 text-marketing-400" />
+                {/* Mobile Layout - Icon and Number in one line */}
+                <div className="flex md:hidden items-center justify-center gap-3 mb-4">
+                  <div className="bg-white/10 backdrop-blur-sm p-2 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-all duration-300">
+                    <stat.icon className="h-6 w-6 text-marketing-400" />
+                  </div>
+                  <div>
+                    <CountUpNumber value={stat.value} suffix={stat.suffix} />
+                  </div>
                 </div>
 
-                <div className="mb-2">
-                  <CountUpNumber value={stat.value} suffix={stat.suffix} />
+                {/* Desktop Layout - Icon above number */}
+                <div className="hidden md:block">
+                  <div className="bg-white/10 backdrop-blur-sm p-3 rounded-full inline-flex items-center justify-center mb-4 mx-auto group-hover:bg-white/20 transition-all duration-300">
+                    <stat.icon className="h-8 w-8 text-marketing-400" />
+                  </div>
+                  <div className="mb-2">
+                    <CountUpNumber value={stat.value} suffix={stat.suffix} />
+                  </div>
                 </div>
 
                 <div className="text-xl font-medium text-white/90 mb-1 group-hover:text-white transition-colors">

@@ -223,21 +223,39 @@ const Reviews = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16 max-w-4xl mx-auto"
         >
           {stats.map((stat, index) => (
             <motion.div
               key={index}
               whileHover={{ y: -5, scale: 1.05 }}
-              className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-marketing-500/30 transition-all duration-300"
+              className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-3 md:p-4 border border-white/10 hover:border-marketing-500/30 transition-all duration-300"
             >
-              <div className="w-12 h-12 mx-auto mb-3 bg-gradient-to-r from-marketing-500 to-marketing-600 rounded-full flex items-center justify-center">
-                <stat.icon className="w-6 h-6 text-white" />
+              {/* Mobile Layout - Icon and value in one horizontal line */}
+              <div className="flex md:hidden items-center gap-3 justify-center">
+                <div className="w-8 h-8 bg-gradient-to-r from-marketing-500 to-marketing-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <stat.icon className="w-4 h-4 text-white" />
+                </div>
+                <div className="text-left">
+                  <div className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-marketing-400 to-marketing-500">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs text-white/70 leading-tight">
+                    {stat.label}
+                  </div>
+                </div>
               </div>
-              <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-marketing-400 to-marketing-500 mb-1">
-                {stat.value}
+
+              {/* Desktop Layout - Original design */}
+              <div className="hidden md:block">
+                <div className="w-12 h-12 mx-auto mb-3 bg-gradient-to-r from-marketing-500 to-marketing-600 rounded-full flex items-center justify-center">
+                  <stat.icon className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-marketing-400 to-marketing-500 mb-1">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-white/70">{stat.label}</div>
               </div>
-              <div className="text-sm text-white/70">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
@@ -266,60 +284,125 @@ const Reviews = () => {
                 className="grid md:grid-cols-3 gap-8 items-center"
               >
                 {/* Client Info */}
+                {/* Client Info */}
                 <div className="text-center md:text-left">
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    className="relative inline-block mb-4"
-                  >
-                    <img
-                      src={testimonials[currentIndex].avatar}
-                      alt={testimonials[currentIndex].name}
-                      className="w-24 h-24 rounded-full mx-auto md:mx-0 border-4 border-marketing-500/30 shadow-lg"
-                    />
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-marketing-500 to-marketing-600 rounded-full flex items-center justify-center">
-                      <Play className="w-4 h-4 text-white" />
+                  {/* Mobile Layout - Image and details in one line */}
+                  <div className="flex md:hidden items-center gap-4 mb-4">
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      className="relative flex-shrink-0"
+                    >
+                      <img
+                        src={testimonials[currentIndex].avatar}
+                        alt={testimonials[currentIndex].name}
+                        className="w-16 h-16 rounded-full border-3 border-marketing-500/30 shadow-lg"
+                      />
+                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-marketing-500 to-marketing-600 rounded-full flex items-center justify-center">
+                        <Play className="w-3 h-3 text-white" />
+                      </div>
+                    </motion.div>
+
+                    <div className="flex-1 text-left">
+                      <h3 className="text-lg font-bold text-white mb-1">
+                        {testimonials[currentIndex].name}
+                      </h3>
+                      <p className="text-marketing-400 font-medium text-sm mb-1">
+                        {testimonials[currentIndex].role}
+                      </p>
+                      <p className="text-white/60 text-xs mb-2">
+                        {testimonials[currentIndex].company}
+                      </p>
+
+                      {/* Rating */}
+                      <div className="flex gap-1 mb-2">
+                        {[...Array(testimonials[currentIndex].rating)].map(
+                          (_, i) => (
+                            <motion.div
+                              key={i}
+                              initial={{ scale: 0, rotate: 180 }}
+                              animate={{ scale: 1, rotate: 0 }}
+                              transition={{ delay: i * 0.1, duration: 0.3 }}
+                            >
+                              <Star className="w-3 h-3 fill-marketing-500 text-marketing-500" />
+                            </motion.div>
+                          )
+                        )}
+                      </div>
+
+                      {/* Project Details */}
+                      <div className="space-y-1 text-xs">
+                        <div className="bg-marketing-500/20 rounded px-2 py-1">
+                          <span className="text-marketing-300">Industry: </span>
+                          <span className="text-white">
+                            {testimonials[currentIndex].industry}
+                          </span>
+                        </div>
+                        <div className="bg-marketing-500/20 rounded px-2 py-1">
+                          <span className="text-marketing-300">Project: </span>
+                          <span className="text-white">
+                            {testimonials[currentIndex].projectType}
+                          </span>
+                        </div>
+                      </div>
                     </div>
-                  </motion.div>
-
-                  <h3 className="text-xl font-bold text-white mb-1">
-                    {testimonials[currentIndex].name}
-                  </h3>
-                  <p className="text-marketing-400 font-medium mb-1">
-                    {testimonials[currentIndex].role}
-                  </p>
-                  <p className="text-white/60 text-sm mb-3">
-                    {testimonials[currentIndex].company}
-                  </p>
-
-                  {/* Rating */}
-                  <div className="flex justify-center md:justify-start gap-1 mb-4">
-                    {[...Array(testimonials[currentIndex].rating)].map(
-                      (_, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ scale: 0, rotate: 180 }}
-                          animate={{ scale: 1, rotate: 0 }}
-                          transition={{ delay: i * 0.1, duration: 0.3 }}
-                        >
-                          <Star className="w-5 h-5 fill-marketing-500 text-marketing-500" />
-                        </motion.div>
-                      )
-                    )}
                   </div>
 
-                  {/* Project Details */}
-                  <div className="space-y-2 text-sm">
-                    <div className="bg-marketing-500/20 rounded-lg px-3 py-1">
-                      <span className="text-marketing-300">Industry: </span>
-                      <span className="text-white">
-                        {testimonials[currentIndex].industry}
-                      </span>
+                  {/* Desktop Layout - Original vertical design */}
+                  <div className="hidden md:block">
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      className="relative inline-block mb-4"
+                    >
+                      <img
+                        src={testimonials[currentIndex].avatar}
+                        alt={testimonials[currentIndex].name}
+                        className="w-24 h-24 rounded-full mx-auto md:mx-0 border-4 border-marketing-500/30 shadow-lg"
+                      />
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-marketing-500 to-marketing-600 rounded-full flex items-center justify-center">
+                        <Play className="w-4 h-4 text-white" />
+                      </div>
+                    </motion.div>
+
+                    <h3 className="text-xl font-bold text-white mb-1">
+                      {testimonials[currentIndex].name}
+                    </h3>
+                    <p className="text-marketing-400 font-medium mb-1">
+                      {testimonials[currentIndex].role}
+                    </p>
+                    <p className="text-white/60 text-sm mb-3">
+                      {testimonials[currentIndex].company}
+                    </p>
+
+                    {/* Rating */}
+                    <div className="flex justify-center md:justify-start gap-1 mb-4">
+                      {[...Array(testimonials[currentIndex].rating)].map(
+                        (_, i) => (
+                          <motion.div
+                            key={i}
+                            initial={{ scale: 0, rotate: 180 }}
+                            animate={{ scale: 1, rotate: 0 }}
+                            transition={{ delay: i * 0.1, duration: 0.3 }}
+                          >
+                            <Star className="w-5 h-5 fill-marketing-500 text-marketing-500" />
+                          </motion.div>
+                        )
+                      )}
                     </div>
-                    <div className="bg-marketing-500/20 rounded-lg px-3 py-1">
-                      <span className="text-marketing-300">Project: </span>
-                      <span className="text-white">
-                        {testimonials[currentIndex].projectType}
-                      </span>
+
+                    {/* Project Details */}
+                    <div className="space-y-2 text-sm">
+                      <div className="bg-marketing-500/20 rounded-lg px-3 py-1">
+                        <span className="text-marketing-300">Industry: </span>
+                        <span className="text-white">
+                          {testimonials[currentIndex].industry}
+                        </span>
+                      </div>
+                      <div className="bg-marketing-500/20 rounded-lg px-3 py-1">
+                        <span className="text-marketing-300">Project: </span>
+                        <span className="text-white">
+                          {testimonials[currentIndex].projectType}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>

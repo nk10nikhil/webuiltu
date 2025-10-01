@@ -198,15 +198,23 @@ const Services = () => {
                 <div className="absolute inset-0 bg-black/40"></div>
 
                 <div className="p-8 relative z-10">
-                  {/* Icon */}
-                  <div className="mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-marketing-600 to-marketing-800 rounded-2xl flex items-center justify-center group-hover:shadow-lg group-hover:shadow-marketing-500/30 transition-all duration-300">
-                      <service.icon className="w-8 h-8 text-white" />
+                  {/* Icon and Title - Responsive Layout */}
+                  <div className="mb-6 flex md:flex-col items-center md:items-start gap-4 md:gap-0">
+                    {/* Icon */}
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-marketing-600 to-marketing-800 rounded-xl md:rounded-2xl flex items-center justify-center group-hover:shadow-lg group-hover:shadow-marketing-500/30 transition-all duration-300">
+                        <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                      </div>
                     </div>
+
+                    {/* Title - Only visible on mobile in the flex layout */}
+                    <h3 className="text-lg md:hidden font-semibold group-hover:text-marketing-400 transition-colors text-white flex-1">
+                      {service.title}
+                    </h3>
                   </div>
 
-                  {/* Content */}
-                  <h3 className="text-xl font-semibold mb-3 group-hover:text-marketing-400 transition-colors text-white">
+                  {/* Title - Desktop layout */}
+                  <h3 className="hidden md:block text-xl font-semibold mb-3 group-hover:text-marketing-400 transition-colors text-white">
                     {service.title}
                   </h3>
 

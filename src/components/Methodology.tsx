@@ -108,7 +108,7 @@ const Methodology = () => {
                     {step.icon}
                   </div>
                   {index < steps.length - 1 && (
-                    <div className="absolute top-16 left-1/2 w-px h-56 md:h-36 bg-gray-200 -translate-x-1/2"></div>
+                    <div className="absolute top-16 left-1/2 w-px h-64 md:h-36 bg-gray-200 -translate-x-1/2"></div>
                   )}
                 </div>
 
