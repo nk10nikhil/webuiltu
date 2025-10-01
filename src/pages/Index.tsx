@@ -1,111 +1,90 @@
-
-import React, { useEffect } from 'react';
-import Navbar from '../components/Navbar';
-import Services from '../components/Services';
-import Stats from '../components/Stats';
-import Methodology from '../components/Methodology';
-import Clients from '../components/Clients';
-import CallToAction from '../components/CallToAction';
-import Footer from '../components/Footer';
-import CaseStudies from '../components/CaseStudies';
-import BackgroundHero from '../components/BackgrounHero';
-import LogoScroll from '@/components/LogoScroll';
-import Newsletter from '@/components/Newsletter';
-import About from '@/components/About';
-import FAQ from '@/components/FAQ';
-import Reviews from '@/components/Reviews';
+import React, { useEffect } from "react";
+import Navbar from "../components/Navbar";
+import BackgroundHero from "../components/BackgrounHero";
+import LogoScroll from "@/components/LogoScroll";
+import CallToAction from "@/components/CallToAction";
+import Services from "../components/Services";
+import Methodology from "../components/Methodology";
+import Stats from "../components/Stats";
+import About from "@/components/About";
+import Reviews from "@/components/Reviews";
+import FAQ from "@/components/FAQ";
+import Newsletter from "@/components/Newsletter";
+import Footer from "../components/Footer";
 
 const Index = () => {
   useEffect(() => {
     const handleScroll = () => {
-      const elements = document.querySelectorAll('.reveal-on-scroll');
+      const elements = document.querySelectorAll(".reveal-on-scroll");
 
       elements.forEach((el) => {
         const rect = el.getBoundingClientRect();
         const windowHeight = window.innerHeight;
 
         if (rect.top < windowHeight * 0.85) {
-          el.classList.add('active');
+          el.classList.add("active");
         }
       });
     };
 
     handleScroll();
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  // const dockItems = [
-  //   {
-  //     id: 'home',
-  //     icon: <Home className="w-8 h-8 text-white" />,
-  //     label: 'Home',
-  //     onClick: () => {
-  //       window.scrollTo({ top: 0, behavior: 'smooth' });
-  //     }
-  //   },
-  //   {
-  //     id: 'services',
-  //     icon: <Briefcase className="w-8 h-8 text-white" />,
-  //     label: 'Services',
-  //     onClick: () => {
-  //       const servicesElement = document.querySelector('#services');
-  //       servicesElement?.scrollIntoView({ behavior: 'smooth' });
-  //     }
-  //   },
-  //   {
-  //     id: 'stats',
-  //     icon: <BarChart3 className="w-8 h-8 text-white" />,
-  //     label: 'Stats',
-  //     onClick: () => {
-  //       const statsElement = document.querySelector('#stats');
-  //       statsElement?.scrollIntoView({ behavior: 'smooth' });
-  //     }
-  //   },
-  //   {
-  //     id: 'clients',
-  //     icon: <Users className="w-8 h-8 text-white" />,
-  //     label: 'Clients',
-  //     onClick: () => {
-  //       const clientsElement = document.querySelector('#clients');
-  //       clientsElement?.scrollIntoView({ behavior: 'smooth' });
-  //     }
-  //   },
-  //   {
-  //     id: 'contact',
-  //     icon: <Phone className="w-8 h-8 text-white" />,
-  //     label: 'Contact',
-  //     onClick: () => {
-  //       const footerElement = document.querySelector('#footer');
-  //       footerElement?.scrollIntoView({ behavior: 'smooth' });
-  //     }
-  //   }
-  // ];
 
   return (
     <div className="relative overflow-hidden">
       <Navbar />
+
       <main>
-        <BackgroundHero />
-        <LogoScroll />
-        <CallToAction />
-        <div id="services">
+        <section id="home">
+          <BackgroundHero />
+        </section>
+
+        <section id="brands">
+          <LogoScroll />
+        </section>
+
+        <section id="cta">
+          <CallToAction />
+        </section>
+
+        <section id="services">
           <Services />
-        </div>
-        <Methodology />
-        <div id="stats">
+        </section>
+
+        <section id="methodology">
+          <Methodology />
+        </section>
+
+        <section id="stats">
           <Stats />
-        </div>
-        <About />
-        <Reviews />
-        <FAQ />
+        </section>
+
+        <section id="about">
+          <About />
+        </section>
+
+        <section id="reviews">
+          <Reviews />
+        </section>
+
+        <section id="faq">
+          <FAQ />
+        </section>
+
+        <section id="newsletter">
+          <Newsletter />
+        </section>
       </main>
-      <Newsletter />
-      <div id="footer">
+
+      <footer id="contact">
         <Footer />
-      </div>
+      </footer>
     </div>
   );
 };
