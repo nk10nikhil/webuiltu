@@ -29,7 +29,7 @@ const Services = () => {
         "Conference Management",
         "Intimate Networking Events",
       ],
-      bgImage: "/service1.jpg",
+      bgImage: "/service2.jpg",
       link: "/services/event-organization",
     },
     {
@@ -45,7 +45,7 @@ const Services = () => {
         "Performance Analytics",
         "Mobile-First Development",
       ],
-      bgImage: "/service2.jpg",
+      bgImage: "/service1.jpg",
       link: "/services/website-development",
     },
     {
@@ -98,16 +98,16 @@ const Services = () => {
     },
     {
       icon: Star,
-      title: "360° Marketing Solutions",
+      title: "360° Tech Solutions",
       description:
-        "Comprehensive marketing strategies that deliver exceptional results. From digital campaigns to traditional marketing excellence.",
+        "Empower your brand with comprehensive digital strategies. From SEO to social media, we deliver end-to-end solutions that drive growth.",
       features: [
-        "Digital Marketing Campaigns",
-        "Social Media Management",
-        "Content Marketing",
-        "Lead Generation",
-        "Marketing Automation",
-        "Growth Strategy",
+        "Graphic Design",
+        "App Development",
+        "UI/UX Design",
+        "Analytics & Reporting",
+        "Tech Support",
+        "Data Security",
       ],
       bgImage: "/service6.jpg",
       link: "/services/marketing-solutions",
