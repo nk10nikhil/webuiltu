@@ -329,7 +329,7 @@ const About = () => {
             className="lg:col-span-5"
           >
             <div className="relative">
-              <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-marketing-500/30 to-marketing-600/20 border border-marketing-500/30 shadow-2xl">
+              <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-marketing-500/30 to-marketing-600/20 border border-marketing-500/30 shadow-2xl">
                 <img
                   src="/logo.jpg"
                   alt="Our team organizing events"
