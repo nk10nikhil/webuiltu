@@ -47,18 +47,6 @@ const About = () => {
       label: "Values",
       icon: <Award className="w-4 h-4" />,
     },
-    {
-      id: "team",
-      label: "Team",
-      icon: <Users className="w-4 h-4" />,
-    },
-  ];
-
-  const achievements = [
-    { number: "150+", label: "Events Organized", growth: "+25%" },
-    { number: "98%", label: "Client Satisfaction", growth: "+5%" },
-    { number: "50+", label: "Brands Promoted", growth: "+40%" },
-    { number: "12", label: "Cities Covered", growth: "+3" },
   ];
 
   const values = [
@@ -98,21 +86,19 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: "Priya Sharma",
+      name: "Ritesh Yadav",
       role: "Creative Director",
-      image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b1e5?w=300&h=300&fit=crop&crop=face",
+      image: "ritesh.jpg",
       expertise: "Brand Strategy, Creative Campaigns",
     },
     {
-      name: "Rahul Kumar",
+      name: "Nikhil Kumar",
       role: "Event Manager",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+      image: "nikhil.jpg",
       expertise: "Event Planning, Project Management",
     },
     {
-      name: "Anita Singh",
+      name: "Sahil",
       role: "Social Media Strategist",
       image:
         "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
@@ -132,23 +118,24 @@ const About = () => {
           >
             <h3 className="text-2xl font-bold text-white mb-2">Our Journey</h3>
             <p className="text-white/80 leading-relaxed text-base">
-              Founded in 2020 by a team of marketing enthusiasts and event
-              specialists, WeBuilt_U Agency emerged from a simple belief: every
-              brand deserves to shine through creative marketing and memorable
-              events that leave lasting impressions.
+              Founded in 2024, WeBuilt_U Agency has rapidly grown into a leading
+              marketing and event management firm. Our journey began with a
+              passion for creating unforgettable brand experiences, and today we
+              pride ourselves on delivering innovative solutions that drive real
+              results for our clients.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-gradient-to-br from-marketing-500/20 to-marketing-600/10 p-5 rounded-xl border border-marketing-500/30 backdrop-blur-sm">
                 <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600 mb-1">
-                  2020
+                  2024
                 </div>
                 <div className="text-sm text-marketing-600">Agency Founded</div>
               </div>
               <div className="bg-gradient-to-br from-marketing-500/20 to-marketing-600/10 p-5 rounded-xl border border-marketing-500/30 backdrop-blur-sm">
                 <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600 mb-1">
-                  2024
+                  2025
                 </div>
-                <div className="text-sm text-marketing-600">150+ Events</div>
+                <div className="text-sm text-marketing-600">10+ Events</div>
               </div>
             </div>
           </motion.div>
@@ -269,7 +256,7 @@ const About = () => {
   return (
     <section
       ref={containerRef}
-      className="relative py-10 md:py-16 overflow-hidden bg-black/20"
+      className="relative py-4 md:py-6 overflow-hidden bg-black/20"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -344,7 +331,7 @@ const About = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-marketing-500/30 to-marketing-600/20 border border-marketing-500/30 shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&h=600&fit=crop"
+                  src="/logo.jpg"
                   alt="Our team organizing events"
                   className="w-full h-full object-cover"
                 />
@@ -376,7 +363,7 @@ const About = () => {
                   </div>
                   <div>
                     <div className="font-bold text-white text-lg">
-                      150+ Events
+                      10+ Events
                     </div>
                     <div className="text-sm text-marketing-600">
                       Successfully Organized

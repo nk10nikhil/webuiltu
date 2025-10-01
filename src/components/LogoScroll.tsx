@@ -3,13 +3,17 @@ import React, { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 const companies = [
-  "Red Bull",
+  "Cornitos",
   "Oggy Holidays",
-  "Lenovo",
-  "Physics Wallah",
+  "GCET",
+  "Zomato",
   "Banarsi Jeera",
   "Sun Drop",
   "Bisleri",
+  "Nykaa",
+  "Skippi",
+  "Internshala",
+  "Lenskart",
 ];
 
 interface LogoScrollProps {

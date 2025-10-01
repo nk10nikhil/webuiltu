@@ -9,7 +9,6 @@ import Stats from "../components/Stats";
 import About from "@/components/About";
 import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
-import Newsletter from "@/components/Newsletter";
 import Footer from "../components/Footer";
 
 const Index = () => {
@@ -75,10 +74,6 @@ const Index = () => {
 
         <section id="faq">
           <FAQ />
-        </section>
-
-        <section id="newsletter">
-          <Newsletter />
         </section>
       </main>
 
