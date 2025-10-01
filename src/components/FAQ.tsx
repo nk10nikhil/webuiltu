@@ -137,7 +137,7 @@ const FAQ = () => {
 
   return (
     <section
-      className="relative py-20 lg:py-32 overflow-hidden bg-black/20"
+      className="relative py-10 lg:py-16 overflow-hidden bg-black/20"
       ref={ref}
     >
       {/* Background Pattern */}

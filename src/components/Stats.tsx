@@ -200,7 +200,7 @@ const Stats = () => {
   }, []);
 
   return (
-    <section className="relative py-8 px-0 md:px-4 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] text-white overflow-hidden">
+    <section className="relative py-16 px-0 md:px-4 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] text-white overflow-hidden">
       {/* Animated Canvas Background */}
       <canvas
         ref={canvasRef}

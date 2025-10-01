@@ -66,29 +66,33 @@ const About = () => {
       icon: <Zap className="w-6 h-6" />,
       title: "Creative Excellence",
       description: "We push boundaries with innovative marketing solutions",
-      gradient: "linear-gradient(135deg, #ea580c 0%, #dc2626 100%)",
+      gradient:
+        "linear-gradient(135deg, hsl(32, 95%, 44%) 0%, hsl(32, 95%, 60%) 100%)",
       bgColor: "rgba(234, 88, 12, 0.1)",
     },
     {
       icon: <Shield className="w-6 h-6" />,
       title: "Trust & Reliability",
       description: "Your brand's reputation is our top priority",
-      gradient: "linear-gradient(135deg, #16a34a 0%, #059669 100%)",
-      bgColor: "rgba(22, 163, 74, 0.1)",
+      gradient:
+        "linear-gradient(135deg, hsl(32, 95%, 50%) 0%, hsl(32, 95%, 40%) 100%)",
+      bgColor: "rgba(234, 88, 12, 0.1)",
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
       title: "Measurable Impact",
       description: "We deliver quantifiable marketing results",
-      gradient: "linear-gradient(135deg, #ea580c 0%, #f59e0b 100%)",
+      gradient:
+        "linear-gradient(135deg, hsl(32, 95%, 44%) 0%, hsl(32, 95%, 55%) 100%)",
       bgColor: "rgba(234, 88, 12, 0.1)",
     },
     {
       icon: <Heart className="w-6 h-6" />,
       title: "Client-Centric",
       description: "Your success is our passion and commitment",
-      gradient: "linear-gradient(135deg, #dc2626 0%, #ea580c 100%)",
-      bgColor: "rgba(220, 38, 38, 0.1)",
+      gradient:
+        "linear-gradient(135deg, hsl(32, 95%, 45%) 0%, hsl(32, 95%, 50%) 100%)",
+      bgColor: "rgba(234, 88, 12, 0.1)",
     },
   ];
 
@@ -124,98 +128,27 @@ const About = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "24px",
-            }}
+            className="flex flex-col gap-6"
           >
-            <h3
-              style={{
-                fontSize: "28px",
-                fontWeight: "700",
-                color: "white",
-                marginBottom: "8px",
-              }}
-            >
-              Our Journey
-            </h3>
-            <p
-              style={{
-                color: "#d97706",
-                lineHeight: "1.7",
-                fontSize: "16px",
-              }}
-            >
+            <h3 className="text-2xl font-bold text-white mb-2">Our Journey</h3>
+            <p className="text-white/80 leading-relaxed text-base">
               Founded in 2020 by a team of marketing enthusiasts and event
               specialists, WeBuilt_U Agency emerged from a simple belief: every
               brand deserves to shine through creative marketing and memorable
               events that leave lasting impressions.
             </p>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "16px",
-              }}
-            >
-              <div
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(234, 88, 12, 0.2) 0%, rgba(234, 88, 12, 0.1) 100%)",
-                  padding: "20px",
-                  borderRadius: "12px",
-                  border: "1px solid rgba(234, 88, 12, 0.3)",
-                  backdropFilter: "blur(10px)",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "24px",
-                    fontWeight: "700",
-                    color: "#ea580c",
-                    marginBottom: "4px",
-                  }}
-                >
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-gradient-to-br from-marketing-500/20 to-marketing-600/10 p-5 rounded-xl border border-marketing-500/30 backdrop-blur-sm">
+                <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600 mb-1">
                   2020
                 </div>
-                <div
-                  style={{
-                    fontSize: "14px",
-                    color: "#d97706",
-                  }}
-                >
-                  Agency Founded
-                </div>
+                <div className="text-sm text-marketing-600">Agency Founded</div>
               </div>
-              <div
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(234, 88, 12, 0.2) 0%, rgba(234, 88, 12, 0.1) 100%)",
-                  padding: "20px",
-                  borderRadius: "12px",
-                  border: "1px solid rgba(234, 88, 12, 0.3)",
-                  backdropFilter: "blur(10px)",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "24px",
-                    fontWeight: "700",
-                    color: "#ea580c",
-                    marginBottom: "4px",
-                  }}
-                >
+              <div className="bg-gradient-to-br from-marketing-500/20 to-marketing-600/10 p-5 rounded-xl border border-marketing-500/30 backdrop-blur-sm">
+                <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600 mb-1">
                   2024
                 </div>
-                <div
-                  style={{
-                    fontSize: "14px",
-                    color: "#d97706",
-                  }}
-                >
-                  150+ Events
-                </div>
+                <div className="text-sm text-marketing-600">150+ Events</div>
               </div>
             </div>
           </motion.div>
@@ -226,37 +159,16 @@ const About = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "24px",
-            }}
+            className="flex flex-col gap-6"
           >
-            <h3
-              style={{
-                fontSize: "28px",
-                fontWeight: "700",
-                color: "white",
-                marginBottom: "8px",
-              }}
-            >
-              Our Mission
-            </h3>
-            <p
-              style={{
-                color: "#d97706",
-                lineHeight: "1.7",
-                fontSize: "16px",
-              }}
-            >
+            <h3 className="text-2xl font-bold text-white mb-2">Our Mission</h3>
+            <p className="text-white/80 leading-relaxed text-base">
               To empower brands through exceptional event organization and
               strategic social media promotion, creating meaningful connections
               between businesses and their audiences while driving measurable
               growth and brand recognition.
             </p>
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "16px" }}
-            >
+            <div className="flex flex-col gap-4">
               {[
                 "Create memorable brand experiences",
                 "Drive engagement through events",
@@ -267,27 +179,10 @@ const About = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.1 }}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "12px",
-                    padding: "12px",
-                    borderRadius: "8px",
-                    background: "rgba(234, 88, 12, 0.1)",
-                    border: "1px solid rgba(234, 88, 12, 0.2)",
-                  }}
+                  className="flex items-center gap-3 p-3 rounded-lg bg-marketing-500/20 border border-marketing-500/30"
                 >
-                  <CheckCircle
-                    style={{ width: "20px", height: "20px", color: "#ea580c" }}
-                  />
-                  <span
-                    style={{
-                      color: "white",
-                      fontWeight: "500",
-                    }}
-                  >
-                    {item}
-                  </span>
+                  <CheckCircle className="w-5 h-5 text-marketing-600" />
+                  <span className="text-white font-medium">{item}</span>
                 </motion.div>
               ))}
             </div>
@@ -299,29 +194,10 @@ const About = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "24px",
-            }}
+            className="flex flex-col gap-6"
           >
-            <h3
-              style={{
-                fontSize: "28px",
-                fontWeight: "700",
-                color: "white",
-                marginBottom: "8px",
-              }}
-            >
-              Our Values
-            </h3>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(2, 1fr)",
-                gap: "16px",
-              }}
-            >
+            <h3 className="text-2xl font-bold text-white mb-2">Our Values</h3>
+            <div className="grid grid-cols-2 gap-4">
               {values.map((value, idx) => (
                 <motion.div
                   key={idx}
@@ -329,49 +205,15 @@ const About = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.1 }}
                   whileHover={{ scale: 1.02, y: -2 }}
-                  style={{
-                    padding: "20px",
-                    background: value.bgColor,
-                    borderRadius: "12px",
-                    border: "1px solid rgba(234, 88, 12, 0.2)",
-                    backdropFilter: "blur(10px)",
-                    cursor: "pointer",
-                    transition: "all 0.3s ease",
-                  }}
+                  className="p-5 bg-gradient-to-br from-marketing-500/10 to-marketing-600/5 rounded-xl border border-marketing-500/20 backdrop-blur-sm cursor-pointer transition-all duration-300 hover:border-marketing-500/40"
                 >
-                  <div
-                    style={{
-                      width: "48px",
-                      height: "48px",
-                      borderRadius: "12px",
-                      background: value.gradient,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "white",
-                      marginBottom: "16px",
-                      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
-                    }}
-                  >
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-marketing-500 to-marketing-600 flex items-center justify-center text-white mb-4 shadow-lg">
                     {value.icon}
                   </div>
-                  <h4
-                    style={{
-                      fontWeight: "600",
-                      color: "white",
-                      marginBottom: "8px",
-                      fontSize: "16px",
-                    }}
-                  >
+                  <h4 className="font-semibold text-white mb-2 text-base">
                     {value.title}
                   </h4>
-                  <p
-                    style={{
-                      fontSize: "14px",
-                      color: "#d97706",
-                      lineHeight: "1.5",
-                    }}
-                  >
+                  <p className="text-sm text-white/70 leading-relaxed">
                     {value.description}
                   </p>
                 </motion.div>
@@ -385,25 +227,12 @@ const About = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "24px",
-            }}
+            className="flex flex-col gap-6"
           >
-            <h3
-              style={{
-                fontSize: "28px",
-                fontWeight: "700",
-                color: "white",
-                marginBottom: "8px",
-              }}
-            >
+            <h3 className="text-2xl font-bold text-white mb-2">
               Meet Our Team
             </h3>
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "16px" }}
-            >
+            <div className="flex flex-col gap-4">
               {teamMembers.map((member, idx) => (
                 <motion.div
                   key={idx}
@@ -411,56 +240,21 @@ const About = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.1 }}
                   whileHover={{ scale: 1.02 }}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "16px",
-                    padding: "20px",
-                    background: "rgba(234, 88, 12, 0.1)",
-                    borderRadius: "12px",
-                    border: "1px solid rgba(234, 88, 12, 0.2)",
-                    backdropFilter: "blur(10px)",
-                    transition: "all 0.3s ease",
-                  }}
+                  className="flex items-center gap-4 p-5 bg-gradient-to-r from-marketing-500/10 to-marketing-600/5 rounded-xl border border-marketing-500/20 backdrop-blur-sm transition-all duration-300 hover:border-marketing-500/40"
                 >
                   <img
                     src={member.image}
                     alt={member.name}
-                    style={{
-                      width: "64px",
-                      height: "64px",
-                      borderRadius: "50%",
-                      objectFit: "cover",
-                      border: "2px solid rgba(234, 88, 12, 0.4)",
-                    }}
+                    className="w-16 h-16 rounded-full object-cover border-2 border-marketing-500/40"
                   />
                   <div>
-                    <h4
-                      style={{
-                        fontWeight: "600",
-                        color: "white",
-                        marginBottom: "4px",
-                      }}
-                    >
+                    <h4 className="font-semibold text-white mb-1">
                       {member.name}
                     </h4>
-                    <p
-                      style={{
-                        fontSize: "14px",
-                        color: "#ea580c",
-                        marginBottom: "4px",
-                      }}
-                    >
+                    <p className="text-sm text-marketing-600 mb-1">
                       {member.role}
                     </p>
-                    <p
-                      style={{
-                        fontSize: "12px",
-                        color: "#d97706",
-                      }}
-                    >
-                      {member.expertise}
-                    </p>
+                    <p className="text-xs text-white/60">{member.expertise}</p>
                   </div>
                 </motion.div>
               ))}
@@ -475,88 +269,39 @@ const About = () => {
   return (
     <section
       ref={containerRef}
-      style={{
-        position: "relative",
-        paddingTop: "80px",
-        paddingBottom: "80px",
-        overflow: "hidden",
-        background: "#0c0a09",
-      }}
+      className="relative py-10 md:py-16 overflow-hidden bg-black/20"
     >
-      {/* Enhanced Background Elements */}
-      <div style={{ position: "absolute", inset: "0", pointerEvents: "none" }}>
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
         <div
+          className="absolute inset-0"
           style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            width: "400px",
-            height: "400px",
-            background:
-              "radial-gradient(circle, rgba(234, 88, 12, 0.15) 0%, transparent 70%)",
-            borderRadius: "50%",
-            filter: "blur(80px)",
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            bottom: "0",
-            right: "0",
-            width: "500px",
-            height: "500px",
-            background:
-              "radial-gradient(circle, rgba(234, 88, 12, 0.1) 0%, transparent 70%)",
-            borderRadius: "50%",
-            filter: "blur(80px)",
-          }}
-        />
-        {/* Animated dots */}
-        <div
-          style={{
-            position: "absolute",
-            inset: "0",
             backgroundImage:
-              "radial-gradient(circle, rgba(234, 88, 12, 0.2) 1px, transparent 1px)",
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
             backgroundSize: "50px 50px",
-            opacity: "0.3",
           }}
         />
       </div>
 
+      {/* Enhanced Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-radial from-marketing-500/15 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-radial from-marketing-500/10 to-transparent rounded-full blur-3xl" />
+      </div>
+
       <motion.div
-        style={{
-          y,
-          opacity,
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "0 24px",
-          position: "relative",
-        }}
+        style={{ y, opacity }}
+        className="max-w-7xl mx-auto px-6 relative z-10"
       >
         {/* Enhanced Header */}
-        <div style={{ textAlign: "center", marginBottom: "64px" }}>
+        <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              padding: "8px 16px",
-              background: "rgba(234, 88, 12, 0.2)",
-              borderRadius: "50px",
-              color: "#ea580c",
-              fontWeight: "500",
-              fontSize: "14px",
-              marginBottom: "24px",
-              border: "1px solid rgba(234, 88, 12, 0.3)",
-              backdropFilter: "blur(10px)",
-            }}
+            className="inline-flex items-center px-4 py-2 bg-white/10 rounded-full text-white/90 font-medium text-sm mb-6 border border-white/20 backdrop-blur-sm"
           >
-            <Globe2
-              style={{ width: "16px", height: "16px", marginRight: "8px" }}
-            />
+            <Globe2 className="w-4 h-4 mr-2" />
             About WeBuilt_U Agency
           </motion.div>
 
@@ -565,24 +310,10 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            style={{
-              fontSize: "clamp(2.5rem, 5vw, 4rem)",
-              fontWeight: "700",
-              marginBottom: "24px",
-              lineHeight: "1.1",
-              color: "white",
-            }}
+            className="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white"
           >
             Building{" "}
-            <span
-              style={{
-                background:
-                  "linear-gradient(135deg, #ea580c 0%, #f59e0b 50%, #dc2626 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600">
               Brands
             </span>{" "}
             that Matter
@@ -593,13 +324,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            style={{
-              fontSize: "20px",
-              color: "#d97706",
-              maxWidth: "768px",
-              margin: "0 auto",
-              lineHeight: "1.6",
-            }}
+            className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed"
           >
             We're not just marketers—we're brand builders, event specialists,
             and digital strategists creating memorable experiences that elevate
@@ -608,80 +333,30 @@ const About = () => {
         </div>
 
         {/* Enhanced Main Content */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(12, 1fr)",
-            gap: "48px",
-            alignItems: "start",
-          }}
-        >
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Side - Enhanced Video/Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            style={{ gridColumn: "span 5" }}
+            className="lg:col-span-5"
           >
-            <div style={{ position: "relative" }}>
-              <div
-                style={{
-                  aspectRatio: "4/3",
-                  borderRadius: "24px",
-                  overflow: "hidden",
-                  background:
-                    "linear-gradient(135deg, rgba(234, 88, 12, 0.3) 0%, rgba(220, 38, 38, 0.2) 100%)",
-                  border: "1px solid rgba(234, 88, 12, 0.3)",
-                  boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)",
-                }}
-              >
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-marketing-500/30 to-marketing-600/20 border border-marketing-500/30 shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&h=600&fit=crop"
                   alt="Our team organizing events"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
+                  className="w-full h-full object-cover"
                 />
                 {!isVideoPlaying && (
-                  <div
-                    style={{
-                      position: "absolute",
-                      inset: "0",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      background: "rgba(0, 0, 0, 0.4)",
-                      backdropFilter: "blur(4px)",
-                    }}
-                  >
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm">
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => setIsVideoPlaying(true)}
-                      style={{
-                        width: "80px",
-                        height: "80px",
-                        background: "rgba(255, 255, 255, 0.95)",
-                        borderRadius: "50%",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        border: "none",
-                        cursor: "pointer",
-                        boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
-                        transition: "all 0.3s ease",
-                      }}
+                      className="w-20 h-20 bg-white/95 rounded-full flex items-center justify-center border-none cursor-pointer shadow-xl transition-all duration-300"
                     >
-                      <Play
-                        style={{
-                          width: "32px",
-                          height: "32px",
-                          color: "#ea580c",
-                          marginLeft: "4px",
-                        }}
-                      />
+                      <Play className="w-8 h-8 text-marketing-600 ml-1" />
                     </motion.button>
                   </div>
                 )}
@@ -693,53 +368,17 @@ const About = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
-                style={{
-                  position: "absolute",
-                  bottom: "-24px",
-                  right: "-24px",
-                  background: "rgba(12, 10, 9, 0.95)",
-                  backdropFilter: "blur(20px)",
-                  boxShadow: "0 20px 40px rgba(0, 0, 0, 0.4)",
-                  borderRadius: "16px",
-                  padding: "20px",
-                  border: "1px solid rgba(234, 88, 12, 0.3)",
-                }}
+                className="absolute -bottom-6 -right-6 bg-black/90 backdrop-blur-xl shadow-2xl rounded-2xl p-5 border border-white/10"
               >
-                <div
-                  style={{ display: "flex", alignItems: "center", gap: "16px" }}
-                >
-                  <div
-                    style={{
-                      width: "48px",
-                      height: "48px",
-                      background:
-                        "linear-gradient(135deg, #ea580c 0%, #dc2626 100%)",
-                      borderRadius: "12px",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <Trophy
-                      style={{ width: "24px", height: "24px", color: "white" }}
-                    />
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-marketing-500 to-marketing-600 rounded-xl flex items-center justify-center">
+                    <Trophy className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div
-                      style={{
-                        fontWeight: "700",
-                        color: "white",
-                        fontSize: "18px",
-                      }}
-                    >
+                    <div className="font-bold text-white text-lg">
                       150+ Events
                     </div>
-                    <div
-                      style={{
-                        fontSize: "14px",
-                        color: "#d97706",
-                      }}
-                    >
+                    <div className="text-sm text-marketing-600">
                       Successfully Organized
                     </div>
                   </div>
@@ -753,44 +392,21 @@ const About = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            style={{ gridColumn: "span 7" }}
+            className="lg:col-span-7"
           >
             {/* Enhanced Tab Navigation */}
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "8px",
-                marginBottom: "32px",
-              }}
-            >
+            <div className="flex flex-wrap gap-2 mb-8">
               {tabs.map((tab, idx) => (
                 <motion.button
                   key={tab.id}
                   onClick={() => setActiveTab(idx)}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "8px",
-                    padding: "12px 20px",
-                    borderRadius: "12px",
-                    border: "none",
-                    cursor: "pointer",
-                    fontWeight: "500",
-                    transition: "all 0.3s ease",
-                    background:
-                      activeTab === idx
-                        ? "linear-gradient(135deg, #ea580c 0%, #dc2626 100%)"
-                        : "rgba(234, 88, 12, 0.1)",
-                    color: activeTab === idx ? "white" : "#d97706",
-                    backdropFilter: "blur(10px)",
-                    boxShadow:
-                      activeTab === idx
-                        ? "0 8px 25px rgba(0, 0, 0, 0.3)"
-                        : "none",
-                  }}
+                  className={`flex items-center gap-2 px-5 py-3 rounded-xl border-none cursor-pointer font-medium transition-all duration-300 backdrop-blur-sm ${
+                    activeTab === idx
+                      ? "bg-gradient-to-r from-marketing-500 to-marketing-600 text-white shadow-lg"
+                      : "bg-white/10 text-white/70 hover:bg-white/15 hover:text-white"
+                  }`}
                 >
                   {tab.icon}
                   <span>{tab.label}</span>
@@ -799,170 +415,9 @@ const About = () => {
             </div>
 
             {/* Tab Content */}
-            <div style={{ minHeight: "400px" }}>{renderTabContent()}</div>
+            <div className="min-h-[200px]">{renderTabContent()}</div>
           </motion.div>
         </div>
-
-        {/* Enhanced Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          style={{
-            marginTop: "96px",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            gap: "24px",
-          }}
-        >
-          {achievements.map((achievement, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              whileHover={{ scale: 1.05, y: -8 }}
-              style={{
-                textAlign: "center",
-                padding: "32px 24px",
-                background: "rgba(234, 88, 12, 0.1)",
-                backdropFilter: "blur(20px)",
-                borderRadius: "20px",
-                border: "1px solid rgba(234, 88, 12, 0.3)",
-                transition: "all 0.3s ease",
-                cursor: "pointer",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: "36px",
-                  fontWeight: "700",
-                  color: "white",
-                  marginBottom: "8px",
-                  background:
-                    "linear-gradient(135deg, #ea580c 0%, #f59e0b 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
-                {achievement.number}
-              </div>
-              <div
-                style={{
-                  fontSize: "16px",
-                  color: "#d97706",
-                  marginBottom: "8px",
-                  fontWeight: "500",
-                }}
-              >
-                {achievement.label}
-              </div>
-              <div
-                style={{
-                  fontSize: "14px",
-                  color: "#ea580c",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "4px",
-                }}
-              >
-                <TrendingUp style={{ width: "14px", height: "14px" }} />
-                {achievement.growth}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Enhanced CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          style={{
-            marginTop: "96px",
-            textAlign: "center",
-          }}
-        >
-          <div
-            style={{
-              background:
-                "linear-gradient(135deg, rgba(234, 88, 12, 0.2) 0%, rgba(220, 38, 38, 0.1) 100%)",
-              borderRadius: "24px",
-              padding: "48px 32px",
-              border: "1px solid rgba(234, 88, 12, 0.3)",
-              backdropFilter: "blur(20px)",
-              position: "relative",
-              overflow: "hidden",
-            }}
-          >
-            {/* Sparkle effects */}
-            <div
-              style={{
-                position: "absolute",
-                top: "20px",
-                right: "20px",
-                opacity: "0.7",
-              }}
-            >
-              <Sparkles
-                style={{
-                  width: "24px",
-                  height: "24px",
-                  color: "#ea580c",
-                }}
-              />
-            </div>
-            <h3
-              style={{
-                fontSize: "32px",
-                fontWeight: "700",
-                color: "white",
-                marginBottom: "16px",
-              }}
-            >
-              Ready to Elevate Your Brand?
-            </h3>
-            <p
-              style={{
-                color: "#d97706",
-                marginBottom: "32px",
-                maxWidth: "600px",
-                margin: "0 auto 32px auto",
-                fontSize: "18px",
-                lineHeight: "1.6",
-              }}
-            >
-              Join 150+ brands that trust us to deliver exceptional events and
-              marketing campaigns that drive real engagement. Let's create
-              something extraordinary together.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-                padding: "16px 32px",
-                background: "linear-gradient(135deg, #ea580c 0%, #dc2626 100%)",
-                color: "white",
-                borderRadius: "12px",
-                border: "none",
-                cursor: "pointer",
-                fontWeight: "600",
-                fontSize: "16px",
-                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
-                transition: "all 0.3s ease",
-              }}
-            >
-              Start Your Campaign
-              <ArrowRight style={{ width: "20px", height: "20px" }} />
-            </motion.button>
-          </div>
-        </motion.div>
       </motion.div>
     </section>
   );

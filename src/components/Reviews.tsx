@@ -105,7 +105,7 @@ const Reviews = () => {
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [isAutoPlaying, testimonials.length]);
@@ -130,7 +130,7 @@ const Reviews = () => {
   return (
     <section
       ref={ref}
-      className="relative py-20 lg:py-32 overflow-hidden bg-black/20"
+      className="relative py-10 md:py-16 overflow-hidden bg-black/20"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -402,57 +402,6 @@ const Reviews = () => {
               </div>
             </div>
           </div>
-        </motion.div>
-
-        {/* Additional Testimonial Cards */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="grid md:grid-cols-3 gap-6 mt-16"
-        >
-          {testimonials.slice(0, 3).map((testimonial, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-marketing-500/30 transition-all duration-300 group"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <img
-                  src={testimonial.avatar}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full border-2 border-marketing-500/30"
-                />
-                <div>
-                  <h4 className="font-semibold text-white text-sm">
-                    {testimonial.name}
-                  </h4>
-                  <p className="text-marketing-400 text-xs">
-                    {testimonial.company}
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-1 mb-3">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 fill-marketing-500 text-marketing-500"
-                  />
-                ))}
-              </div>
-
-              <p className="text-white/80 text-sm leading-relaxed line-clamp-3 group-hover:text-white transition-colors">
-                "{testimonial.text.substring(0, 120)}..."
-              </p>
-
-              <div className="mt-4 pt-4 border-t border-white/10">
-                <span className="text-marketing-400 text-xs font-medium">
-                  {testimonial.results}
-                </span>
-              </div>
-            </motion.div>
-          ))}
         </motion.div>
       </div>
     </section>

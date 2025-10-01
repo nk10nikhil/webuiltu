@@ -328,7 +328,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="py-16 lg:py-24 relative overflow-hidden bg-black/20">
+    <section className="py-10 md:py-16 relative overflow-hidden bg-black/20">
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
 
       {/* Background Pattern */}

@@ -66,7 +66,7 @@ const Methodology = () => {
   return (
     <section
       id="methodology"
-      className="py-10 px-0 md:px-12 bg-black/20 relative overflow-hidden"
+      className="py-10 md:pt-20 px-0 md:px-12 bg-black/20 relative overflow-hidden"
     >
       <div className="absolute inset-0 opacity-10">
         <div
@@ -80,7 +80,7 @@ const Methodology = () => {
       </div>
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16 reveal-on-scroll">
-          <div className="inline-block mb-2 px-3 py-1 border border-white/20 rounded-full font-medium text-white/90 backdrop-blur-sm bg-white/10 text-lg">
+          <div className="inline-block mb-4 px-3 py-1 border border-white/20 rounded-full font-medium text-white/90 backdrop-blur-sm bg-white/10 text-lg">
             Our Methodology
           </div>
           <h2 className="section-heading text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600">
@@ -123,7 +123,7 @@ const Methodology = () => {
                         key={detailIndex}
                         className="px-3 py-1 bg-marketing-500/20 text-marketing-400 rounded-full text-sm"
                       >
-                        {detail}
+                        ⦿ {detail}
                       </span>
                     ))}
                   </div>

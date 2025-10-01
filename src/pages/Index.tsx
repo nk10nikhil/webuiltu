@@ -91,15 +91,14 @@ const Index = () => {
         <BackgroundHero />
         <LogoScroll />
         <CallToAction />
-
         <div id="services">
           <Services />
         </div>
+        <Methodology />
         <div id="stats">
           <Stats />
         </div>
         <About />
-        <Methodology />
         <Reviews />
         <FAQ />
       </main>
