@@ -1,26 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Charset & Viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WeBuilt_U - Connect-Engage-Groww</title>
-  <meta name="description"
-    content="WeBuilt_U - A platform to connect, engage, and grow with like-minded individuals. Join us to enhance your brand and marketing efforts." />
-  <meta name="nk10nikhil" content="WeBuilt_U" />
-  <meta property="/robo.png" content="/robo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-</head>
+    <!-- Title & Branding -->
+    <title>WeBuilt_U | Connect · Engage · Grow</title>
+    <meta
+      name="description"
+      content="WeBuilt_U is a platform that helps brands and individuals connect, engage, and grow through impactful digital experiences, marketing, and collaborations."
+    />
+    <meta name="author" content="WeBuiltU" />
+    <meta
+      name="keywords"
+      content="WeBuiltU, marketing, events, brand development, website development, influencer marketing, sponsorship management, growth platform, webuiltu, nk10nikhil"
+    />
 
-<body>
-  <div id="root"></div>
-  <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-  <!-- <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script> -->
-  <script src="./script.js" type="module"></script>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="WeBuiltU | Connect · Engage · Grow" />
+    <meta
+      property="og:description"
+      content="A platform to connect, engage, and grow with like-minded individuals. Enhance your brand with marketing, events, and digital solutions."
+    />
+    <meta property="og:image" content="/robo.png" />
+    <meta property="og:url" content="https://webuiltu.com" />
+    <meta property="og:site_name" content="WeBuiltU" />
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WeBuiltU | Connect · Engage · Grow" />
+    <meta
+      name="twitter:description"
+      content="A platform to connect, engage, and grow. Join us to boost your brand, marketing, and collaborations."
+    />
+    <meta name="twitter:image" content="/robo.png" />
+
+    <!-- Favicon & Manifest -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://webuiltu.com" />
+
+    <!-- JSON-LD Structured Data -->
+    <!-- Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "WeBuiltU",
+        "url": "https://webuiltu.com",
+        "logo": "https://webuiltu.com/robo.png",
+        "sameAs": [
+          "https://www.facebook.com/webuiltu",
+          "https://www.instagram.com/webuiltu",
+          "https://www.linkedin.com/company/webuiltu",
+          "https://twitter.com/webuiltu"
+        ],
+        "description": "WeBuiltU helps brands and individuals connect, engage, and grow through impactful marketing, events, digital experiences, and collaborations.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-7777048666",
+          "contactType": "customer support",
+          "areaServed": "IN",
+          "availableLanguage": ["English", "Hindi"]
+        }
+      }
+    </script>
+
+    <!-- Website with SearchAction -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "WeBuiltU",
+        "url": "https://webuiltu.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://webuiltu.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- Services Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Event Organization",
+        "provider": { "@type": "Organization", "name": "WeBuiltU" },
+        "description": "Seamless planning and flawless execution of impactful events that leave lasting impressions."
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Website Development",
+        "provider": { "@type": "Organization", "name": "WeBuiltU" },
+        "description": "High-performing, user-friendly websites tailored to elevate your brand’s digital presence."
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Brand Development",
+        "provider": { "@type": "Organization", "name": "WeBuiltU" },
+        "description": "Distinctive brand identities that inspire trust and connect with your audience."
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Sponsorship Management",
+        "provider": { "@type": "Organization", "name": "WeBuiltU" },
+        "description": "Strategic sponsorships that maximize exposure and deliver measurable value."
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Influencer Collaborations",
+        "provider": { "@type": "Organization", "name": "WeBuiltU" },
+        "description": "Authentic influencer partnerships to amplify your message and engage new audiences."
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Analytics & Insights",
+        "provider": { "@type": "Organization", "name": "WeBuiltU" },
+        "description": "Actionable data-driven insights to refine strategies and maximize growth."
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <!-- <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script> -->
+    <script src="./script.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

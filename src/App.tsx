@@ -54,7 +54,6 @@ const App = () => (
             element={<AnalyticsReporting />}
           />
 
-          {/* <Route path="/dock-demo" element={<DockDemo />} /> */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

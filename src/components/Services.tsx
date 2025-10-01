@@ -1,15 +1,16 @@
 import React from "react";
 import {
   Calendar,
-  Share2,
+  Globe,
   Award,
-  Target,
+  Handshake,
   Users,
-  TrendingUp,
+  Star,
   ArrowRight,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { CheckCircle } from "lucide-react";
 
 const Services = () => {
   const navigate = useNavigate();
@@ -17,87 +18,99 @@ const Services = () => {
   const services = [
     {
       icon: Calendar,
-      title: "Event Organization",
+      title: "Premium Event Organization",
       description:
-        "We plan and execute memorable corporate events, product launches, and experiential marketing campaigns.",
+        "Transform your vision into unforgettable experiences. We orchestrate world-class events that captivate audiences and drive meaningful connections.",
       features: [
-        "Corporate Events",
-        "Product Launches",
-        "Experiential Marketing",
-        "Event Management",
+        "Corporate Galas",
+        "Product Launch Spectacles",
+        "Trade Show Exhibitions",
+        "Award Ceremonies",
+        "Conference Management",
+        "Intimate Networking Events",
       ],
       bgImage: "/service1.jpg",
       link: "/services/event-organization",
     },
     {
-      icon: Share2,
-      title: "Social Media Management",
+      icon: Globe,
+      title: "Cutting-Edge Website Development",
       description:
-        "Strategic planning and execution of social media campaigns to increase brand awareness and engagement.",
+        "Craft digital masterpieces that convert visitors into customers. Our websites combine stunning design with powerful functionality.",
       features: [
-        "Content Strategy",
-        "Social Media Campaigns",
-        "Community Management",
-        "Brand Awareness",
+        "Responsive Web Design",
+        "E-commerce Solutions",
+        "Custom Web Applications",
+        "SEO-Optimized Architecture",
+        "Performance Analytics",
+        "Mobile-First Development",
       ],
       bgImage: "/service2.jpg",
-      link: "/services/social-media-management",
-    },
-    {
-      icon: Target,
-      title: "Digital Marketing",
-      description:
-        "Comprehensive digital marketing strategies to reach your target audience and achieve measurable results.",
-      features: [
-        "SEO Optimization",
-        "PPC Campaigns",
-        "Email Marketing",
-        "Conversion Optimization",
-      ],
-      bgImage: "/service3.jpg",
-      link: "/services/digital-marketing",
+      link: "/services/website-development",
     },
     {
       icon: Award,
-      title: "Brand Development",
+      title: "Strategic Brand Development",
       description:
-        "Creating distinctive and consistent brand identities that resonate with your target audience.",
+        "Build iconic brands that dominate markets. We create distinctive identities that resonate deeply with your target audience.",
       features: [
-        "Brand Identity",
-        "Logo Design",
+        "Brand Strategy & Positioning",
+        "Logo & Visual Identity",
+        "Brand Messaging Framework",
         "Brand Guidelines",
-        "Visual Identity",
+        "Market Differentiation",
+        "Brand Experience Design",
       ],
-      bgImage: "/service4.jpg",
+      bgImage: "/service3.jpg",
       link: "/services/brand-development",
     },
     {
-      icon: Users,
-      title: "Influencer Partnerships",
+      icon: Handshake,
+      title: "Elite Sponsorship Management",
       description:
-        "Connect with relevant influencers to amplify your brand message and reach new audiences.",
+        "Unlock premium partnership opportunities. We connect brands with high-value sponsors for mutually beneficial collaborations.",
       features: [
-        "Influencer Outreach",
-        "Partnership Management",
-        "Campaign Coordination",
+        "Sponsor Acquisition",
+        "Partnership Negotiation",
+        "Sponsor Activation",
+        "ROI Maximization",
+        "Relationship Management",
         "Performance Tracking",
       ],
-      bgImage: "/service5.jpg",
-      link: "/services/influencer-partnerships",
+      bgImage: "/service4.jpg",
+      link: "/services/sponsorship-management",
     },
     {
-      icon: TrendingUp,
-      title: "Analytics & Reporting",
+      icon: Users,
+      title: "Influencer Marketing Collaboration",
       description:
-        "Detailed performance metrics and insights to measure campaign success and guide future strategies.",
+        "Amplify your reach through authentic partnerships. We connect you with influential voices that drive engagement and conversions.",
       features: [
+        "Influencer Discovery",
+        "Campaign Strategy",
+        "Content Collaboration",
         "Performance Analytics",
-        "ROI Analysis",
-        "Data Insights",
-        "Strategic Reporting",
+        "Audience Insights",
+        "Long-term Partnerships",
+      ],
+      bgImage: "/service5.jpg",
+      link: "/services/influencer-marketing",
+    },
+    {
+      icon: Star,
+      title: "360° Marketing Solutions",
+      description:
+        "Comprehensive marketing strategies that deliver exceptional results. From digital campaigns to traditional marketing excellence.",
+      features: [
+        "Digital Marketing Campaigns",
+        "Social Media Management",
+        "Content Marketing",
+        "Lead Generation",
+        "Marketing Automation",
+        "Growth Strategy",
       ],
       bgImage: "/service6.jpg",
-      link: "/services/analytics-reporting",
+      link: "/services/marketing-solutions",
     },
   ];
 
@@ -156,20 +169,20 @@ const Services = () => {
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
-          <div className="inline-block mb-6 px-3 py-1 border border-white/20 rounded-full font-medium text-white/90 backdrop-blur-sm bg-white/10 text-lg">
-            Our Services
+        <div className="text-center max-w-4xl mx-auto mb-16 reveal-on-scroll">
+          <div className="inline-block mb-6 px-4 py-2 border border-white/20 rounded-full font-medium text-white/90 backdrop-blur-sm bg-white/10 text-lg">
+            Our Premium Services
           </div>
           <h2 className="text-3xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600">
-            Transforming Ideas into <br />
+            Elevating Brands Through <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-marketing-800 to-marketing-600">
-              Digital Experiences
+              Exceptional Experiences
             </span>
           </h2>
           <p className="text-white/80 text-lg md:py-6">
-            We offer comprehensive marketing solutions From branding to stunning
-            designs, we deliver end-to-end solutions that drive measurable
-            results for your business.
+            From memorable events to powerful digital presence, we deliver
+            comprehensive solutions that transform your brand vision into
+            market-leading success stories.
           </p>
         </div>
 
@@ -223,21 +236,21 @@ const Services = () => {
                   </p>
 
                   {/* Features */}
-                  <ul className="space-y-2 mb-6">
+                  <ul className="grid grid-cols-2 md:grid-cols-1 gap-x-4 gap-y-2 mb-6">
                     {service.features.map((feature, idx) => (
                       <li
                         key={idx}
                         className="flex items-center text-sm text-white/60"
                       >
-                        <div className="w-1.5 h-1.5 bg-marketing-400 rounded-full mr-3" />
-                        {feature}
+                        <CheckCircle className="h-3 w-3 mr-3 text-marketing-300" />
+                        <span className="leading-tight">{feature}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* Learn More */}
                   <div className="flex items-center text-marketing-400 font-medium text-sm group-hover:translate-x-2 transition-transform">
-                    Learn More
+                    Explore Service
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </div>
                 </div>
