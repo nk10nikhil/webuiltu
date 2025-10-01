@@ -5,15 +5,14 @@ import { cn } from "@/lib/utils";
 const companies = [
   "Cornitos",
   "Oggy Holidays",
-  "GCET",
-  "Zomato",
   "Banarsi Jeera",
   "Sun Drop",
   "Bisleri",
   "Nykaa",
-  "Skippi",
+  "Skippi Ice Pops",
   "Internshala",
-  "Lenskart",
+  "Suzuki",
+  "Physics Wallah",
 ];
 
 interface LogoScrollProps {
