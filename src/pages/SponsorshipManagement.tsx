@@ -3,33 +3,36 @@ import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
-  Calendar,
+  Handshake,
+  Target,
+  TrendingUp,
   Users,
-  MapPin,
-  Clock,
   Star,
   CheckCircle,
-  Award,
-  Camera,
-  Music,
-  Utensils,
-  Mic,
   ArrowRight,
   Phone,
-  Mail,
-  Play,
   Sparkles,
-  Heart,
+  DollarSign,
   Trophy,
-  Target,
   Zap,
+  BarChart3,
+  FileText,
+  Search,
+  UserCheck,
+  Award,
+  Briefcase,
+  TrendingDown,
+  MessageSquare,
+  Shield,
+  Globe,
+  Lightbulb,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Animated Counter Component
+// Animated Counter
 const AnimatedCounter = ({
   end,
   duration = 2,
@@ -190,12 +193,12 @@ const HeroSection = () => {
       {/* Floating Icons */}
       <div className="absolute inset-0 overflow-hidden">
         {[
-          { Icon: Calendar, position: "top-20 left-10", delay: 0 },
-          { Icon: Users, position: "top-40 right-20", delay: 0.2 },
-          { Icon: Music, position: "bottom-40 left-20", delay: 0.4 },
-          { Icon: Camera, position: "bottom-20 right-10", delay: 0.6 },
-          { Icon: Award, position: "top-1/2 left-5", delay: 0.8 },
-          { Icon: Heart, position: "top-1/3 right-10", delay: 1 },
+          { Icon: Handshake, position: "top-20 left-10", delay: 0 },
+          { Icon: Trophy, position: "top-40 right-20", delay: 0.2 },
+          { Icon: DollarSign, position: "bottom-40 left-20", delay: 0.4 },
+          { Icon: Award, position: "bottom-20 right-10", delay: 0.6 },
+          { Icon: Target, position: "top-1/2 left-5", delay: 0.8 },
+          { Icon: Briefcase, position: "top-1/3 right-10", delay: 1 },
         ].map(({ Icon, position, delay }, index) => (
           <motion.div
             key={index}
@@ -237,7 +240,7 @@ const HeroSection = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-marketing-500/20 border border-marketing-500/30 rounded-full text-marketing-300 text-sm mb-8 backdrop-blur-sm">
             <Sparkles className="w-4 h-4 animate-pulse" />
-            Premium Event Organization
+            Elite Sponsorship Management
           </div>
         </motion.div>
 
@@ -248,11 +251,11 @@ const HeroSection = () => {
           className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tight leading-tight"
         >
           <span className="bg-clip-text text-transparent bg-gradient-to-b from-white via-white/95 to-white/80">
-            Creating Unforgettable
+            Unlock Premium
           </span>
           <br />
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-marketing-400 via-marketing-500 to-marketing-600">
-            Experiences
+            Partnership Opportunities
           </span>
         </motion.h1>
 
@@ -262,9 +265,9 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.4 }}
           className="text-base sm:text-lg md:text-xl leading-relaxed tracking-wide max-w-3xl mx-auto px-4 text-white/80 font-medium pb-8"
         >
-          Transform your vision into world-class events that captivate audiences
-          and drive meaningful connections. From corporate galas to intimate
-          gatherings, we orchestrate every detail to perfection.
+          Connect brands with high-value sponsors for mutually beneficial
+          collaborations. We maximize ROI through strategic partnerships and
+          expert relationship management.
         </motion.p>
 
         <motion.div
@@ -278,8 +281,8 @@ const HeroSection = () => {
             whileTap={{ scale: 0.95 }}
             className="group bg-gradient-to-r from-marketing-500 to-marketing-600 hover:from-marketing-600 hover:to-marketing-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2"
           >
-            <Calendar className="w-5 h-5" />
-            Plan Your Event
+            <Handshake className="w-5 h-5" />
+            Find Sponsors
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </motion.button>
 
@@ -288,8 +291,8 @@ const HeroSection = () => {
             whileTap={{ scale: 0.95 }}
             className="group border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold transition-all duration-300 backdrop-blur-sm flex items-center gap-2"
           >
-            <Play className="w-4 h-4" />
-            View Portfolio
+            <Trophy className="w-4 h-4" />
+            Success Stories
           </motion.button>
         </motion.div>
 
@@ -302,28 +305,28 @@ const HeroSection = () => {
         >
           {[
             {
-              number: 500,
+              number: 150,
               suffix: "+",
-              label: "Events Organized",
-              icon: <Calendar className="w-5 h-5" />,
+              label: "Partnerships Created",
+              icon: <Handshake className="w-5 h-5" />,
             },
             {
               number: 50,
-              suffix: "K+",
-              label: "Happy Attendees",
-              icon: <Users className="w-5 h-5" />,
+              suffix: "M+",
+              label: "Sponsorship Value",
+              icon: <DollarSign className="w-5 h-5" />,
             },
             {
-              number: 99,
+              number: 400,
+              suffix: "%",
+              label: "Average ROI",
+              icon: <TrendingUp className="w-5 h-5" />,
+            },
+            {
+              number: 98,
               suffix: "%",
               label: "Client Satisfaction",
               icon: <Star className="w-5 h-5" />,
-            },
-            {
-              number: 15,
-              suffix: "+",
-              label: "Cities Covered",
-              icon: <MapPin className="w-5 h-5" />,
             },
           ].map((stat, index) => (
             <motion.div
@@ -346,86 +349,86 @@ const HeroSection = () => {
   );
 };
 
-// Event Types Section
-const EventTypesSection = () => {
+// Services Section
+const ServicesSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  const eventTypes = [
+  const services = [
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Corporate Galas",
+      icon: <Search className="w-6 h-6" />,
+      title: "Sponsor Acquisition",
       description:
-        "Sophisticated corporate events that impress stakeholders and celebrate achievements with elegance.",
+        "Identify and connect with premium sponsors aligned with your brand values and objectives.",
       features: [
-        "Annual Meetings",
-        "Award Ceremonies",
-        "Team Building",
-        "Product Launches",
+        "Prospect Research",
+        "Database Access",
+        "Outreach Strategy",
+        "Pitch Development",
       ],
       color: "from-blue-500 to-cyan-500",
     },
     {
-      icon: <Trophy className="w-6 h-6" />,
-      title: "Product Launch Spectacles",
+      icon: <MessageSquare className="w-6 h-6" />,
+      title: "Partnership Negotiation",
       description:
-        "Unforgettable product reveals that generate buzz and create lasting impressions in the market.",
+        "Expert negotiation to secure favorable terms and maximize value for all parties.",
       features: [
-        "Media Coverage",
-        "Influencer Engagement",
-        "Interactive Demos",
-        "Brand Activation",
+        "Contract Review",
+        "Terms Negotiation",
+        "Legal Support",
+        "Deal Structuring",
       ],
       color: "from-purple-500 to-pink-500",
     },
     {
-      icon: <Award className="w-6 h-6" />,
-      title: "Trade Show Exhibitions",
+      icon: <Zap className="w-6 h-6" />,
+      title: "Sponsor Activation",
       description:
-        "Stand out at trade shows with captivating booth designs and engaging attendee experiences.",
+        "Bring sponsorship agreements to life with creative activation strategies.",
       features: [
-        "Booth Design",
-        "Lead Generation",
-        "Product Display",
-        "Networking Lounges",
+        "Campaign Planning",
+        "Brand Integration",
+        "Event Activation",
+        "Content Creation",
       ],
       color: "from-orange-500 to-red-500",
     },
     {
-      icon: <Star className="w-6 h-6" />,
-      title: "Award Ceremonies",
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "ROI Maximization",
       description:
-        "Prestigious award shows that honor excellence with grace, style, and memorable moments.",
+        "Strategic planning and execution to ensure maximum return on sponsorship investment.",
       features: [
-        "Stage Production",
-        "Celebrity Management",
-        "Live Streaming",
-        "Red Carpet Events",
-      ],
-      color: "from-yellow-500 to-amber-500",
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Conference Management",
-      description:
-        "Seamless conference execution from registration to closing, ensuring smooth operations throughout.",
-      features: [
-        "Speaker Coordination",
-        "AV Management",
-        "Registration Systems",
-        "Break-out Sessions",
+        "Value Analysis",
+        "Benefit Optimization",
+        "Revenue Growth",
+        "Cost Efficiency",
       ],
       color: "from-green-500 to-emerald-500",
     },
     {
-      icon: <Heart className="w-6 h-6" />,
-      title: "Intimate Networking Events",
+      icon: <UserCheck className="w-6 h-6" />,
+      title: "Relationship Management",
       description:
-        "Curated networking experiences that foster meaningful connections in exclusive settings.",
+        "Build and maintain long-term sponsor relationships for sustained partnerships.",
       features: [
-        "Venue Selection",
-        "Catering Excellence",
-        "Guest Management",
-        "Follow-up Coordination",
+        "Regular Communication",
+        "Performance Updates",
+        "Issue Resolution",
+        "Renewal Strategy",
+      ],
+      color: "from-yellow-500 to-amber-500",
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Performance Tracking",
+      description:
+        "Comprehensive analytics and reporting to measure sponsorship effectiveness.",
+      features: [
+        "KPI Monitoring",
+        "Impact Analysis",
+        "Custom Reports",
+        "Data Insights",
       ],
       color: "from-rose-500 to-pink-500",
     },
@@ -433,7 +436,7 @@ const EventTypesSection = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".event-card", {
+      gsap.from(".service-card", {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top center+=100",
@@ -464,37 +467,37 @@ const EventTypesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-marketing-400 to-marketing-600">
-            Event Types We Specialize In
+            Our Sponsorship Services
           </h2>
           <p className="text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
-            From grand spectacles to intimate gatherings, we bring expertise
-            across all event formats.
+            Comprehensive solutions for finding, securing, and managing
+            high-value sponsorship partnerships.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {eventTypes.map((event, index) => (
+          {services.map((service, index) => (
             <motion.div
               key={index}
-              className="event-card bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:border-marketing-500/30 transition-all duration-300 group"
+              className="service-card bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:border-marketing-500/30 transition-all duration-300 group"
               whileHover={{ scale: 1.02, y: -5 }}
             >
               <div
-                className={`w-14 h-14 bg-gradient-to-r ${event.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}
+                className={`w-14 h-14 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}
               >
-                {event.icon}
+                {service.icon}
               </div>
 
               <h3 className="text-2xl font-bold text-white mb-4">
-                {event.title}
+                {service.title}
               </h3>
 
               <p className="text-white/70 mb-6 leading-relaxed">
-                {event.description}
+                {service.description}
               </p>
 
               <div className="space-y-3">
-                {event.features.map((feature, featureIndex) => (
+                {service.features.map((feature, featureIndex) => (
                   <div
                     key={featureIndex}
                     className="flex items-center space-x-3"
@@ -512,38 +515,38 @@ const EventTypesSection = () => {
   );
 };
 
-// Services Section
-const ServicesSection = () => {
-  const services = [
+// Sponsorship Types Section
+const SponsorshipTypesSection = () => {
+  const types = [
     {
-      icon: <Calendar className="w-5 h-5" />,
-      title: "Complete Event Planning",
-      description: "End-to-end planning from concept to execution",
+      icon: <Trophy className="w-5 h-5" />,
+      title: "Event Sponsorships",
+      description: "Major events and conferences",
     },
     {
-      icon: <MapPin className="w-5 h-5" />,
-      title: "Venue Selection",
-      description: "Perfect locations for your unique requirements",
+      icon: <Globe className="w-5 h-5" />,
+      title: "Brand Partnerships",
+      description: "Long-term brand collaborations",
     },
     {
-      icon: <Camera className="w-5 h-5" />,
-      title: "Photography & Videography",
-      description: "Professional documentation of every moment",
+      icon: <Award className="w-5 h-5" />,
+      title: "Sports Sponsorships",
+      description: "Teams and athletic events",
     },
     {
-      icon: <Music className="w-5 h-5" />,
-      title: "Entertainment Booking",
-      description: "Live performances and DJ services",
+      icon: <Briefcase className="w-5 h-5" />,
+      title: "Corporate Sponsorships",
+      description: "Business to business deals",
     },
     {
-      icon: <Utensils className="w-5 h-5" />,
-      title: "Catering Services",
-      description: "Customized menus and gourmet experiences",
+      icon: <Users className="w-5 h-5" />,
+      title: "Community Sponsorships",
+      description: "Local and social initiatives",
     },
     {
-      icon: <Mic className="w-5 h-5" />,
-      title: "Audio Visual Production",
-      description: "State-of-the-art sound and lighting",
+      icon: <Lightbulb className="w-5 h-5" />,
+      title: "Innovation Sponsorships",
+      description: "Tech and startup partnerships",
     },
   ];
 
@@ -560,16 +563,16 @@ const ServicesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-marketing-400 to-marketing-600">
-            Complete Event Solutions
+            Sponsorship Opportunities
           </h2>
           <p className="text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
-            Every detail handled with precision and creativity for flawless
-            execution.
+            We facilitate diverse sponsorship types across multiple industries
+            and sectors.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
+          {types.map((type, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -579,13 +582,13 @@ const ServicesSection = () => {
               whileHover={{ scale: 1.02, y: -2 }}
               className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-marketing-500/30 transition-all duration-300"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-marketing-500 to-marketing-600 rounded-lg flex items-center justify-center mb-4">
-                {service.icon}
+              <div className="w-12 h-12 bg-gradient-to-r from-marketing-500 to-marketing-600 rounded-lg flex items-center justify-center mb-4 text-white">
+                {type.icon}
               </div>
               <h3 className="text-xl font-semibold mb-2 text-white">
-                {service.title}
+                {type.title}
               </h3>
-              <p className="text-white/70">{service.description}</p>
+              <p className="text-white/70">{type.description}</p>
             </motion.div>
           ))}
         </div>
@@ -602,29 +605,30 @@ const ProcessSection = () => {
   const steps = [
     {
       number: "01",
-      title: "Discovery & Consultation",
+      title: "Opportunity Analysis",
       description:
-        "Understanding your vision, objectives, and requirements in detail.",
+        "Assess your sponsorship needs, goals, and ideal partner profile for targeted approach.",
       icon: <Target className="w-6 h-6" />,
     },
     {
       number: "02",
-      title: "Strategic Planning",
+      title: "Sponsor Identification",
       description:
-        "Creating comprehensive plans with timelines and resource allocation.",
-      icon: <Calendar className="w-6 h-6" />,
+        "Research and identify potential sponsors that align with your values and objectives.",
+      icon: <Search className="w-6 h-6" />,
     },
     {
       number: "03",
-      title: "Design & Coordination",
+      title: "Proposal & Negotiation",
       description:
-        "Bringing concepts to life with creative design and vendor coordination.",
-      icon: <Sparkles className="w-6 h-6" />,
+        "Create compelling proposals and negotiate favorable terms for both parties.",
+      icon: <FileText className="w-6 h-6" />,
     },
     {
       number: "04",
-      title: "Flawless Execution",
-      description: "On-site management ensuring every detail runs perfectly.",
+      title: "Activation & Management",
+      description:
+        "Execute sponsorship agreements and provide ongoing relationship management.",
       icon: <Zap className="w-6 h-6" />,
     },
   ];
@@ -676,10 +680,11 @@ const ProcessSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-marketing-400 to-marketing-600">
-            Our Event Process
+            Our Partnership Process
           </h2>
           <p className="text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
-            A proven methodology that ensures exceptional results every time.
+            A strategic methodology to secure and manage high-value
+            sponsorships.
           </p>
         </motion.div>
 
@@ -738,32 +743,29 @@ const ProcessSection = () => {
   );
 };
 
-// Testimonials
-const TestimonialsSection = () => {
-  const testimonials = [
+// Benefits Section
+const BenefitsSection = () => {
+  const benefits = [
     {
-      name: "Priya Sharma",
-      position: "CEO",
-      company: "Tech Innovations Ltd",
-      image: "/review1.jpg",
-      rating: 5,
-      text: "WeBuilt_U transformed our annual conference into an unforgettable experience. Every detail was perfect!",
+      icon: <DollarSign className="w-6 h-6" />,
+      title: "Revenue Growth",
+      description: "Unlock new revenue streams through strategic partnerships",
     },
     {
-      name: "Rajesh Kumar",
-      position: "Marketing Director",
-      company: "Modern Solutions",
-      image: "/review2.jpg",
-      rating: 5,
-      text: "Our product launch was a massive success thanks to their creativity and professionalism.",
+      icon: <Shield className="w-6 h-6" />,
+      title: "Risk Mitigation",
+      description: "Reduce financial risks with diversified funding sources",
     },
     {
-      name: "Anita Patel",
-      position: "Event Manager",
-      company: "Creative Agency",
-      image: "/review3.jpg",
-      rating: 5,
-      text: "They orchestrated our gala with such elegance. Our guests are still talking about it!",
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Brand Elevation",
+      description:
+        "Enhance credibility through association with premium sponsors",
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Network Expansion",
+      description: "Access to sponsor networks and industry connections",
     },
   ];
 
@@ -778,10 +780,84 @@ const TestimonialsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-marketing-400 to-marketing-600">
-            Client Success Stories
+            Partnership Benefits
           </h2>
           <p className="text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
-            Hear from clients who experienced our exceptional event services.
+            Why sponsorship partnerships are crucial for business growth.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {benefits.map((benefit, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="text-center p-8 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl border border-white/20"
+            >
+              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-marketing-500 to-marketing-600 rounded-xl flex items-center justify-center text-white">
+                {benefit.icon}
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">
+                {benefit.title}
+              </h3>
+              <p className="text-white/70">{benefit.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Testimonials
+const TestimonialsSection = () => {
+  const testimonials = [
+    {
+      name: "Rohan Kapoor",
+      position: "Event Director",
+      company: "Premier Events",
+      image: "/review1.jpg",
+      rating: 5,
+      text: "WeBuilt_U secured sponsorships worth ₹5 crores for our annual conference. Exceptional service!",
+    },
+    {
+      name: "Meera Shah",
+      position: "Marketing Head",
+      company: "Sports Federation",
+      image: "/review2.jpg",
+      rating: 5,
+      text: "Their negotiation skills and industry connections are unmatched. Best investment we made.",
+    },
+    {
+      name: "Arjun Nair",
+      position: "Founder",
+      company: "Tech Summit",
+      image: "/review3.jpg",
+      rating: 5,
+      text: "Professional, strategic, and results-driven. They transformed our sponsorship strategy.",
+    },
+  ];
+
+  return (
+    <section className="py-16 md:py-24 bg-gradient-to-b from-black via-marketing-950/30 to-black">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl lg:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-marketing-400 to-marketing-600">
+            Partnership Success Stories
+          </h2>
+          <p className="text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
+            Hear from clients who achieved remarkable results through our
+            sponsorship services.
           </p>
         </motion.div>
 
@@ -838,7 +914,7 @@ const TestimonialsSection = () => {
 // CTA Section
 const CTASection = () => {
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-b from-black via-marketing-950/50 to-black">
+    <section className="py-16 md:py-24 relative overflow-hidden">
       <ParticlesBackground />
 
       <div className="absolute inset-0 pointer-events-none">
@@ -855,15 +931,15 @@ const CTASection = () => {
           className="text-center bg-gradient-to-r from-marketing-500/20 to-marketing-600/10 rounded-3xl p-12 border border-marketing-500/20"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ready to Create Your
+            Ready to Secure
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-marketing-400 to-marketing-600">
-              Perfect Event?
+              Premium Sponsorships?
             </span>
           </h2>
 
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Let's bring your vision to life with our expert event organization
-            services. Contact us today for a free consultation.
+            Let's unlock high-value partnership opportunities for your brand.
+            Connect with us today for expert sponsorship management.
           </p>
 
           <motion.div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -872,8 +948,8 @@ const CTASection = () => {
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-marketing-500 to-marketing-600 hover:from-marketing-600 hover:to-marketing-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
             >
-              <Calendar className="w-5 h-5" />
-              Start Planning Today
+              <Handshake className="w-5 h-5" />
+              Get Started Today
               <ArrowRight className="w-5 h-5" />
             </motion.button>
 
@@ -883,7 +959,7 @@ const CTASection = () => {
               className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2"
             >
               <Phone className="w-5 h-5" />
-              Call Us Now
+              Schedule Call
             </motion.button>
           </motion.div>
         </motion.div>
@@ -893,14 +969,15 @@ const CTASection = () => {
 };
 
 // Main Component
-const EventOrganization = () => {
+const SponsorshipManagement = () => {
   return (
     <div className="min-h-screen bg-black">
       <Navbar />
       <HeroSection />
-      <EventTypesSection />
       <ServicesSection />
+      <SponsorshipTypesSection />
       <ProcessSection />
+      <BenefitsSection />
       <TestimonialsSection />
       <CTASection />
       <Footer />
@@ -908,4 +985,4 @@ const EventOrganization = () => {
   );
 };
 
-export default EventOrganization;
+export default SponsorshipManagement;

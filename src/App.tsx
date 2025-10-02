@@ -7,15 +7,13 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import React from "react";
 
-// Import the new service pages
-import EventOrganization from "./pages/EventOrganization";
-import SocialMediaManagement from "./pages/SocialMediaManagement";
-import DigitalMarketing from "./pages/DigitalMarketing";
+// Import the service pages
+import WebsiteDevelopment from "./pages/WebsiteDevelopment";
 import BrandDevelopment from "./pages/BrandDevelopment";
-import InfluencerPartnerships from "./pages/InfluencerPartnerships";
-import AnalyticsReporting from "./pages/AnalyticsReporting";
-
-// import DockDemo from "./components/DockDemo";
+import SponsorshipManagement from "./pages/SponsorshipManagement";
+import MarketingSolutions from "./pages/TechSolutions";
+import TechSolutions from "./pages/TechSolutions";
+import EventOrganization from "./pages/EventOrganization";
 
 const queryClient = new QueryClient();
 
@@ -30,28 +28,28 @@ const App = () => (
 
           {/* Service routes */}
           <Route
+            path="/services/website-development"
+            element={<WebsiteDevelopment />}
+          />
+          <Route
             path="/services/event-organization"
             element={<EventOrganization />}
-          />
-          <Route
-            path="/services/social-media-management"
-            element={<SocialMediaManagement />}
-          />
-          <Route
-            path="/services/digital-marketing"
-            element={<DigitalMarketing />}
           />
           <Route
             path="/services/brand-development"
             element={<BrandDevelopment />}
           />
           <Route
-            path="/services/influencer-partnerships"
-            element={<InfluencerPartnerships />}
+            path="/services/sponsorship-management"
+            element={<SponsorshipManagement />}
           />
           <Route
-            path="/services/analytics-reporting"
-            element={<AnalyticsReporting />}
+            path="/services/marketing-solutions"
+            element={<MarketingSolutions />}
+          />
+          <Route
+            path="/services/360-tech-solutions"
+            element={<TechSolutions />}
           />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

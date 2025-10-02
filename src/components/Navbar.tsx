@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,12 +49,46 @@ const Navbar = () => {
     setActiveSection(id);
     setIsOpen(false);
 
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+    // Check if we're on a service page (not the main page)
+    if (location.pathname !== "/") {
+      // Navigate to home page first, then scroll
+      navigate("/");
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }, 100);
+    } else {
+      // Already on home page, just scroll
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  };
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsOpen(false);
+
+    // If on a service page, navigate to home
+    if (location.pathname !== "/") {
+      navigate("/");
+      // Scroll to top after navigation
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 100);
+    } else {
+      // Already on home page, just scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setActiveSection("home");
     }
   };
 
@@ -63,15 +100,12 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex justify-between items-center">
         <a
-          href="#home"
-          onClick={(e) => {
-            e.preventDefault();
-            handleNavClick("#home", "home");
-          }}
-          className="flex items-center gap-2 text-white font-bold text-xl md:text-2xl tracking-tight transition-all hover:scale-105"
+          href="/"
+          onClick={handleLogoClick}
+          className="flex items-center gap-2 text-white font-bold text-xl md:text-2xl tracking-tight transition-all hover:scale-105 cursor-pointer"
         >
           <img
-            src="./logo.jpg"
+            src="/logo.jpg"
             className="w-7 h-7 rounded-full"
             alt="WeBuilt_U Logo"
           />
@@ -90,14 +124,14 @@ const Navbar = () => {
                 e.preventDefault();
                 handleNavClick(item.href, item.id);
               }}
-              className={`relative font-medium transition-all duration-300 px-4 py-2 rounded-lg hover:bg-white/10 ${
-                activeSection === item.id
+              className={`relative font-medium transition-all duration-300 px-4 py-2 rounded-lg hover:bg-white/10 cursor-pointer ${
+                activeSection === item.id && location.pathname === "/"
                   ? "text-marketing-400 bg-white/5"
                   : "text-gray-200 hover:text-white"
               }`}
             >
               {item.name}
-              {activeSection === item.id && (
+              {activeSection === item.id && location.pathname === "/" && (
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-marketing-500 rounded-full"></span>
               )}
             </a>
@@ -109,7 +143,7 @@ const Navbar = () => {
               e.preventDefault();
               handleNavClick("#newsletter", "newsletter");
             }}
-            className="bg-gradient-to-r from-marketing-500 to-marketing-600 hover:from-marketing-600 hover:to-marketing-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+            className="bg-gradient-to-r from-marketing-500 to-marketing-600 hover:from-marketing-600 hover:to-marketing-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer"
           >
             Get Started
           </a>
@@ -138,8 +172,8 @@ const Navbar = () => {
                 e.preventDefault();
                 handleNavClick(item.href, item.id);
               }}
-              className={`text-left font-medium py-3 px-4 rounded-lg transition-all duration-300 ${
-                activeSection === item.id
+              className={`text-left font-medium py-3 px-4 rounded-lg transition-all duration-300 cursor-pointer ${
+                activeSection === item.id && location.pathname === "/"
                   ? "text-marketing-400 bg-white/10"
                   : "text-white hover:text-marketing-400 hover:bg-white/5"
               }`}
@@ -154,7 +188,7 @@ const Navbar = () => {
               e.preventDefault();
               handleNavClick("#newsletter", "newsletter");
             }}
-            className="bg-gradient-to-r from-marketing-500 to-marketing-600 text-white text-center py-3 px-4 rounded-lg font-medium mt-4 transition-all duration-300 hover:from-marketing-600 hover:to-marketing-700"
+            className="bg-gradient-to-r from-marketing-500 to-marketing-600 text-white text-center py-3 px-4 rounded-lg font-medium mt-4 transition-all duration-300 hover:from-marketing-600 hover:to-marketing-700 cursor-pointer"
           >
             Get Started
           </a>
