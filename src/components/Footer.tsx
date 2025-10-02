@@ -735,7 +735,7 @@ const Footer = () => {
                 reserved.
               </p>
               <p className="text-white/40 text-xs">
-                Crafting exceptional brand experiences since 2019
+                Crafting exceptional brand experiences since 2024
               </p>
             </div>
 
